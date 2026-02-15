@@ -5,19 +5,19 @@ const steps = [
   {
     number: "01",
     title: "Rellena el formulario",
-    description: "Cuéntame sobre ti, tus objetivos y tu momento vital. Es rápido y sencillo.",
+    description: "Cuéntame tus objetivos y disponibilidad para conocer tu caso y concretar nuestra videollamada inicial.",
     icon: ClipboardList,
   },
   {
     number: "02",
-    title: "Contacto y videollamada",
-    description: "Nos conocemos, resolvemos dudas y diseñamos juntas tu plan personalizado.",
+    title: "Videollamada inicial",
+    description: "Vamos a conocernos mejor y analizar tu situación. Si nuestros servicios se adaptan a lo que necesitas, estarás a solo un paso de comenzar.",
     icon: Video,
   },
   {
     number: "03",
-    title: "Alta en la app y ¡empezamos!",
-    description: "Te doy de alta en la aplicación con tu plan y comenzamos a entrenar.",
+    title: "¡Darte de alta en la App!",
+    description: "Recibirás tu acceso personal y tendrás a tu disposición todo el material necesario para que empecemos este viaje juntas.",
     icon: Smartphone,
   },
 ];
@@ -29,7 +29,7 @@ const Steps = () => {
     <section id="pasos" className="py-20 bg-secondary/30">
       <div ref={ref} className="container mx-auto px-4 opacity-0">
         <h2 className="text-3xl md:text-4xl font-display font-bold text-center text-foreground mb-4">
-          ¿Cómo funciona?
+          ¿Cómo empezamos?
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-xl mx-auto">
           Solo 3 pasos para empezar tu transformación
@@ -38,11 +38,10 @@ const Steps = () => {
         <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           {steps.map((s, i) => (
             <div key={s.number} className="relative text-center">
-              {/* Connector line */}
               {i < steps.length - 1 && (
                 <div className="hidden md:block absolute top-10 left-[60%] w-[80%] h-0.5 bg-border" />
               )}
-              <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 relative z-10">
+              <div className="w-20 h-20 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4 relative z-10">
                 <span className="text-2xl font-display font-bold text-primary">{s.number}</span>
               </div>
               <s.icon className="w-6 h-6 text-primary mx-auto mb-3" />
@@ -52,23 +51,13 @@ const Steps = () => {
           ))}
         </div>
 
-        {/* App mockup */}
-        <div className="mt-16 flex justify-center">
-          <div className="relative">
-            <div className="w-48 h-80 bg-foreground/5 border-4 border-foreground/10 rounded-[2rem] p-2 shadow-2xl">
-              <div className="w-full h-full bg-card rounded-[1.5rem] flex flex-col items-center justify-center gap-3 p-4">
-                <div className="w-8 h-1 bg-foreground/20 rounded-full" />
-                <div className="text-xs font-bold text-primary">VitalFem App</div>
-                <div className="w-full space-y-2">
-                  <div className="h-2 bg-primary/20 rounded-full w-3/4" />
-                  <div className="h-2 bg-cta/30 rounded-full w-full" />
-                  <div className="h-2 bg-primary/20 rounded-full w-1/2" />
-                </div>
-                <div className="w-full h-16 bg-primary/5 rounded-lg mt-2" />
-                <div className="w-full h-12 bg-cta/10 rounded-lg" />
-              </div>
-            </div>
-          </div>
+        <div className="mt-12 text-center">
+          <a
+            href="#contacto"
+            className="inline-block bg-cta text-cta-foreground font-semibold px-8 py-4 rounded-lg text-lg hover:opacity-90 transition-opacity shadow-lg"
+          >
+            QUIERO EMPEZAR YA
+          </a>
         </div>
       </div>
     </section>
