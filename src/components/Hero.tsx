@@ -1,9 +1,8 @@
-import foto1 from "@/assets/Foto_1.JPG";
+import foto1 from "@/assets/foto-1.JPG";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
-      {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src={foto1}
