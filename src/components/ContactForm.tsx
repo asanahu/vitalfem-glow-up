@@ -13,8 +13,8 @@ const programOptions = [
 ];
 
 const steps = [
-  { label: "Datos", icon: User },
   { label: "Programa", icon: Dumbbell },
+  { label: "Datos", icon: User },
   { label: "Agenda", icon: Calendar },
 ];
 
@@ -32,8 +32,8 @@ const ContactForm = () => {
   });
 
   const canNext = [
-    !!form.name && !!form.email,
     !!form.program,
+    !!form.name && !!form.email,
     true,
   ];
 
@@ -133,6 +133,44 @@ const ContactForm = () => {
                   className="space-y-5"
                 >
                   {step === 0 && (
+                    <div>
+                      <label className="text-sm font-medium text-foreground mb-3 block">
+                        ¿Qué programa te interesa? *
+                      </label>
+                      <div className="grid gap-3">
+                        {programOptions.map((p) => (
+                          <motion.button
+                            key={p.value}
+                            type="button"
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            onClick={() => setForm(f => ({ ...f, program: p.value }))}
+                            className={`flex items-center gap-4 p-4 rounded-xl border-2 text-left transition-all duration-200 ${
+                              form.program === p.value
+                                ? "border-primary bg-primary/5 shadow-md"
+                                : "border-border hover:border-accent hover:bg-accent/5"
+                            }`}
+                          >
+                            <span className="text-2xl">{p.icon}</span>
+                            <span className={`font-medium ${form.program === p.value ? "text-primary" : "text-foreground"}`}>
+                              {p.value}
+                            </span>
+                            {form.program === p.value && (
+                              <motion.div
+                                initial={{ scale: 0 }}
+                                animate={{ scale: 1 }}
+                                className="ml-auto"
+                              >
+                                <CheckCircle className="w-5 h-5 text-primary" />
+                              </motion.div>
+                            )}
+                          </motion.button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {step === 1 && (
                     <>
                       <div>
                         <label className="text-sm font-medium text-foreground mb-1.5 flex items-center gap-2">
@@ -174,7 +212,7 @@ const ContactForm = () => {
                     </>
                   )}
 
-                  {step === 1 && (
+                  {step === 2 && (
                     <div>
                       <label className="text-sm font-medium text-foreground mb-3 block">
                         ¿Qué programa te interesa? *
