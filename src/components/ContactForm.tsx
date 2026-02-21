@@ -6,10 +6,13 @@ import { CheckCircle, ArrowRight, ArrowLeft, User, Mail, Phone, Dumbbell, Calend
 import { motion, AnimatePresence } from "framer-motion";
 import foto10 from "@/assets/foto-10.JPG";
 
+const twemojiUrl = (code: string) =>
+  `https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/${code}.png`;
+
 const programOptions = [
-  { value: "Mujer Fit", icon: "🏋️" },
-  { value: "Embarazo Saludable", icon: "🤰" },
-  { value: "Recuperación Posparto", icon: "👶" },
+  { value: "Mujer Fit", icon: twemojiUrl("1f3cb-fe0f-200d-2640-fe0f") },
+  { value: "Embarazo Saludable", icon: twemojiUrl("1f930") },
+  { value: "Recuperación Posparto", icon: twemojiUrl("1f476") },
 ];
 
 const steps = [
@@ -120,7 +123,7 @@ const ContactForm = () => {
             </div>
 
             {/* Step content */}
-            <div className="relative overflow-hidden min-h-[220px]">
+            <div className="relative overflow-hidden min-h-[220px]" style={{ minHeight: step === 2 ? 520 : 220 }}>
               <AnimatePresence mode="wait" custom={direction}>
                 <motion.div
                   key={step}
@@ -151,7 +154,7 @@ const ContactForm = () => {
                                 : "border-border hover:border-accent hover:bg-accent/5"
                             }`}
                           >
-                            <span className="text-2xl">{p.icon}</span>
+                            <img src={p.icon} alt="" className="w-7 h-7" />
                             <span className={`font-medium ${form.program === p.value ? "text-primary" : "text-foreground"}`}>
                               {p.value}
                             </span>
@@ -214,60 +217,26 @@ const ContactForm = () => {
 
                   {step === 2 && (
                     <div>
-                      <label className="text-sm font-medium text-foreground mb-3 block">
-                        ¿Qué programa te interesa? *
-                      </label>
-                      <div className="grid gap-3">
-                        {programOptions.map((p) => (
-                          <motion.button
-                            key={p.value}
-                            type="button"
-                            whileHover={{ scale: 1.02 }}
-                            whileTap={{ scale: 0.98 }}
-                            onClick={() => setForm(f => ({ ...f, program: p.value }))}
-                            className={`flex items-center gap-4 p-4 rounded-xl border-2 text-left transition-all duration-200 ${
-                              form.program === p.value
-                                ? "border-primary bg-primary/5 shadow-md"
-                                : "border-border hover:border-accent hover:bg-accent/5"
-                            }`}
-                          >
-                            <span className="text-2xl">{p.icon}</span>
-                            <span className={`font-medium ${form.program === p.value ? "text-primary" : "text-foreground"}`}>
-                              {p.value}
-                            </span>
-                            {form.program === p.value && (
-                              <motion.div
-                                initial={{ scale: 0 }}
-                                animate={{ scale: 1 }}
-                                className="ml-auto"
-                              >
-                                <CheckCircle className="w-5 h-5 text-primary" />
-                              </motion.div>
-                            )}
-                          </motion.button>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
-                  {step === 2 && (
-                    <div>
-                      <label className="text-sm font-medium text-foreground mb-1.5 flex items-center gap-2">
-                        <Calendar className="w-4 h-4 text-accent" /> Disponibilidad para videollamada (30-40 min)
-                      </label>
-                      <Input
-                        placeholder="Ej: Lunes y miércoles por la tarde"
-                        value={form.availability}
-                        onChange={(e) => setForm(f => ({ ...f, availability: e.target.value }))}
-                        className="transition-all focus:scale-[1.01]"
-                      />
-                      <div className="mt-6 p-4 rounded-xl bg-accent/10 border border-accent/20">
+                      <div className="mb-4 p-4 rounded-xl bg-accent/10 border border-accent/20">
                         <p className="text-sm text-foreground font-medium mb-1">📋 Resumen</p>
                         <p className="text-sm text-muted-foreground">
                           <strong>{form.name}</strong> · {form.email}
                           {form.phone && ` · ${form.phone}`}
                         </p>
                         <p className="text-sm text-primary font-medium mt-1">{form.program}</p>
+                      </div>
+                      <label className="text-sm font-medium text-foreground mb-3 flex items-center gap-2">
+                        <Calendar className="w-4 h-4 text-accent" /> Agenda tu videollamada (30-40 min)
+                      </label>
+                      <div className="rounded-xl overflow-hidden border border-border">
+                        <iframe
+                          src="https://calendly.com/pamela-alarcon-vitalfem/nueva-reunion?hide_gdpr_banner=1&hide_landing_page_details=1"
+                          width="100%"
+                          height="400"
+                          frameBorder="0"
+                          title="Agendar videollamada"
+                          className="w-full"
+                        />
                       </div>
                     </div>
                   )}
