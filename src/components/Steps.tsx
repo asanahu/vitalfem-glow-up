@@ -51,6 +51,7 @@ const Steps = () => {
           ))}
         </div>
 
+
         <div className="mt-12 text-center">
           <a
             href="#contacto"

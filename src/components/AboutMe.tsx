@@ -45,7 +45,7 @@ const AboutMe = () => {
                     className="rounded-2xl shadow-lg w-full max-w-sm mx-auto object-cover aspect-[3/4] my-6"
                   />
                   <p>
-                    Ese compromiso con la salud me ha llevado a profundizar en distintas modalidades de entrenamiento personal, con un enfoque específico en el ámbito del embarazo y el posparto. Entiendo que nuestras necesidades cambian, por lo que he centrado mi carrera en ofrecer un soporte técnico y humano en cada ciclo vital.
+                    Ese compromiso con la salud me ha llevado a profundizar en distintas modalidades de entrenamiento personal, con un <strong className="text-foreground">enfoque específico en el ámbito del embarazo y el posparto</strong>. Entiendo que nuestras necesidades cambian, por lo que he centrado mi carrera en ofrecer un soporte técnico y humano en cada ciclo vital.
                   </p>
                   <p>
                     Desde 2016, formo parte del sector del fitness acompañando a mujeres en diferentes etapas: desde quienes buscan divertirse y desconectar a través del movimiento, mejorando sus hábitos y alcanzando objetivos de salud o imagen física, hasta futuras mamás que desean entrenar de forma segura en cada trimestre de su embarazo, o mujeres en posparto que necesitan recuperar progresivamente fuerza, movilidad y confianza, sintiéndose acompañadas en todo momento.

@@ -1,13 +1,16 @@
 import { useState } from "react";
 import { Dumbbell, Heart, Baby, ClipboardList, Salad, BookOpen, MessageCircle, Video as VideoIcon, Stethoscope, Smartphone, X, Clock } from "lucide-react";
+import appPreview from "@/assets/app-preview.png";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import foto3 from "@/assets/foto-3.png";
 import foto4 from "@/assets/foto-4.png";
-import foto5 from "@/assets/foto-5.png";
-import foto6 from "@/assets/foto-6.JPEG";
-import foto7 from "@/assets/foto-7.PNG";
+import embarazo1 from "@/assets/embarazo-1.png";
+import embarazo2 from "@/assets/embarazo-2.png";
+import embarazo3 from "@/assets/embarazo-3.jpeg";
 import foto8 from "@/assets/foto-8.JPEG";
 import foto9 from "@/assets/foto-9.png";
+import mujerFitNew from "@/assets/mujer-fit-new.png";
+import pospartoNew from "@/assets/posparto-new.jpeg";
 
 const services = [
   { icon: Dumbbell, label: "Entrenamientos personalizados" },
@@ -34,7 +37,7 @@ const programs: Program[] = [
     title: "Mujer Fit",
     icon: Dumbbell,
     summary: "Mejora tu salud y crea hábitos sostenibles mientras fortaleces tu cuerpo con entrenamientos de fuerza real, totalmente adaptados a tu estilo de vida y a tu punto de partida.",
-    photos: [foto3, foto4],
+    photos: [foto3, foto4, mujerFitNew],
     intro: "Lleva tu entrenamiento al siguiente nivel. En el programa Mujer Fit nos alejamos de las rutinas genéricas. Aquí, el entrenamiento de fuerza y funcional se adapta a ti, tanto si entrenas en casa como en el gimnasio, para que consigas resultados reales sin que el deporte sea una carga en tu día a día.",
     features: [
       { icon: ClipboardList, title: "Planificación Personalizada", text: "Rutinas diseñadas según tu nivel actual, tus objetivos, el material del que dispongas y lo que realmente te gusta. Entrenar no tiene que resultarte aburrido." },
@@ -52,7 +55,7 @@ const programs: Program[] = [
     title: "Embarazo Saludable",
     icon: Heart,
     summary: "Entrena segura en cada trimestre con un plan personalizado y ajustado a tus necesidades. Manténte activa, lidiando con posibles molestias y preparando tu cuerpo para el parto y una buena recuperación posparto.",
-    photos: [foto5, foto6, foto7],
+    photos: [embarazo1, embarazo2, embarazo3],
     intro: "Vive un embarazo consciente, fuerte y seguro. El programa Embarazo Saludable está diseñado para acompañarte en este viaje tan especial, eliminando las dudas sobre qué puedes o no hacer. Adaptamos el entrenamiento de fuerza a los cambios de cada trimestre para que te sientas ágil, reduzcas las molestias comunes, llegues al parto con la mejor preparación física posible y favorezcas tu recuperación posparto.",
     features: [
       { icon: ClipboardList, title: "Planificación Personalizada", text: "Rutinas diseñadas según el trimestre en el que te encuentres, tus sensaciones, el material del que dispongas y tus objetivos específicos para esta etapa." },
@@ -70,7 +73,7 @@ const programs: Program[] = [
     title: "Recuperación Posparto",
     icon: Baby,
     summary: "Un acompañamiento cercano diseñado para trabajar la funcionalidad del abdomen y el suelo pélvico de forma respetuosa con tu cuerpo. Recupera tu fuerza, movilidad y confianza de forma progresiva.",
-    photos: [foto8, foto9],
+    photos: [foto8, foto9, pospartoNew],
     intro: "Vuelve a sentirte fuerte y segura. El programa de Recuperación Posparto está diseñado para acompañarte en esta nueva etapa, ofreciéndote una planificación progresiva que respeta los tiempos de tu cuerpo. No solo nos enfocamos en la salud de tu suelo pélvico y abdomen, sino en devolverte la movilidad y la fuerza necesarias para que afrontes tu día a día con máxima vitalidad.",
     features: [
       { icon: ClipboardList, title: "Planificación Personalizada", text: "Rutinas diseñadas según tu punto de partida, tus sensaciones, el material del que dispongas y los objetivos específicos para tu recuperación." },
@@ -124,18 +127,41 @@ const Programs = () => {
 
         {/* Services included */}
         <div className="bg-secondary/50 rounded-2xl p-8 md:p-12">
-          <h3 className="text-xl font-display font-bold text-center text-foreground mb-8">
-            Todos los programas incluyen
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-            {services.map((s) => (
-              <div key={s.label} className="flex flex-col items-center text-center gap-3">
-                <div className="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center">
-                  <s.icon className="w-6 h-6 text-primary" />
-                </div>
-                <span className="text-sm font-medium text-foreground">{s.label}</span>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column: Heading + Icons list */}
+            <div className="flex flex-col">
+              <h3 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-10 text-left">
+                Todos los programas incluyen:
+              </h3>
+
+              <div className="flex flex-col gap-y-8">
+                {services.map((s) => (
+                  <div key={s.label} className="flex items-center gap-5 group">
+                    <div className="w-14 h-14 rounded-2xl bg-accent/20 flex items-center justify-center shrink-0 transition-colors group-hover:bg-accent/30">
+                      <s.icon className="w-6 h-6 text-primary" />
+                    </div>
+                    <span className="text-lg md:text-xl font-display font-bold text-foreground leading-tight tracking-tight">
+                      {s.label}
+                    </span>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            {/* Right Column: App Preview Image (No background) */}
+            <div className="flex flex-col items-center justify-center">
+              <div className="max-w-[260px] md:max-w-[320px] relative">
+                <img
+                  src={appPreview}
+                  alt="App VitalFem Preview"
+                  className="w-full h-auto rounded-3xl transition-transform duration-500 hover:scale-[1.02]"
+                />
+              </div>
+
+              <p className="mt-8 text-sm italic text-primary/60 font-medium text-center max-w-[260px]">
+                Tu nutrición y entrenamiento, siempre contigo en la App VitalFem
+              </p>
+            </div>
           </div>
         </div>
       </div>

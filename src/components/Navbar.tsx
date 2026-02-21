@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import logo from "@/assets/logo-vitalfem.jpeg";
+import logo from "@/assets/navbar-logo.png";
 
 const programs = [
   { label: "Mujer Fit", href: "#mujer-fit" },

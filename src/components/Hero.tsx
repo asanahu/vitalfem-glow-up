@@ -1,11 +1,11 @@
-import foto1 from "@/assets/foto-1.JPG";
+import heroBackground from "@/assets/fuerza-hero.png";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
-          src={foto1}
+          src={heroBackground}
           alt="Pamela Alarcón - Entrenadora personal"
           className="w-full h-full object-cover object-top"
         />
