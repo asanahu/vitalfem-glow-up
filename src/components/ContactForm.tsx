@@ -123,7 +123,7 @@ const ContactForm = () => {
             </div>
 
             {/* Step content */}
-            <div className="relative overflow-hidden min-h-[220px]" style={{ minHeight: step === 2 ? 520 : 220 }}>
+            <div className="relative overflow-hidden min-h-[220px]" style={{ minHeight: step === 2 ? 820 : 220 }}>
               <AnimatePresence mode="wait" custom={direction}>
                 <motion.div
                   key={step}
@@ -216,26 +216,39 @@ const ContactForm = () => {
                   )}
 
                   {step === 2 && (
-                    <div>
-                      <div className="mb-4 p-4 rounded-xl bg-accent/10 border border-accent/20">
-                        <p className="text-sm text-foreground font-medium mb-1">📋 Resumen</p>
-                        <p className="text-sm text-muted-foreground">
-                          <strong>{form.name}</strong> · {form.email}
-                          {form.phone && ` · ${form.phone}`}
-                        </p>
-                        <p className="text-sm text-primary font-medium mt-1">{form.program}</p>
+                    <div className="space-y-4">
+                      <div className="p-3 rounded-xl bg-accent/10 border border-accent/20 flex items-center gap-3">
+                        <CheckCircle className="w-5 h-5 text-accent shrink-0" />
+                        <div className="text-sm">
+                          <span className="font-semibold text-foreground">{form.name}</span>
+                          <span className="text-muted-foreground"> · {form.email}</span>
+                          <span className="text-primary font-medium block">{form.program}</span>
+                        </div>
                       </div>
-                      <label className="text-sm font-medium text-foreground mb-3 flex items-center gap-2">
-                        <Calendar className="w-4 h-4 text-accent" /> Agenda tu videollamada (30-40 min)
-                      </label>
-                      <div className="rounded-xl overflow-hidden border border-border">
+
+                      <div className="text-center space-y-1">
+                        <h3 className="text-lg font-display font-semibold text-foreground flex items-center justify-center gap-2">
+                          <Calendar className="w-5 h-5 text-primary" />
+                          Elige fecha y hora para tu videollamada
+                        </h3>
+                        <p className="text-sm text-muted-foreground">Selecciona el horario que mejor te venga (30-40 min)</p>
+                      </div>
+
+                      <div className="rounded-2xl overflow-hidden border-2 border-primary/20 shadow-lg bg-white relative">
+                        <div className="absolute inset-0 flex items-center justify-center bg-white z-0">
+                          <div className="flex flex-col items-center gap-2 text-muted-foreground">
+                            <div className="w-8 h-8 border-3 border-primary/30 border-t-primary rounded-full animate-spin" />
+                            <span className="text-sm">Cargando calendario...</span>
+                          </div>
+                        </div>
                         <iframe
-                          src="https://calendly.com/pamela-alarcon-vitalfem/nueva-reunion?hide_gdpr_banner=1&hide_landing_page_details=1"
+                          src="https://calendly.com/pamela-alarcon-vitalfem/nueva-reunion?hide_gdpr_banner=1&hide_landing_page_details=1&background_color=ffffff&text_color=3d3d3d&primary_color=8e7fb3"
                           width="100%"
-                          height="400"
+                          height="660"
                           frameBorder="0"
                           title="Agendar videollamada"
-                          className="w-full"
+                          className="w-full relative z-10"
+                          loading="lazy"
                         />
                       </div>
                     </div>
