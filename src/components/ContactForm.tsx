@@ -9,7 +9,7 @@ import foto10 from "@/assets/foto-10.JPG";
 const programOptions = [
   { value: "Mujer Fit", icon: "🏋️" },
   { value: "Embarazo Saludable", icon: "🤰" },
-  { value: "Recuperación Posparto", icon: "🛒" },
+  { value: "Recuperación Posparto", icon: "👶" },
 ];
 
 const steps = [
