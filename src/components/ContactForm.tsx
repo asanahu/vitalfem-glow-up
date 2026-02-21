@@ -251,7 +251,7 @@ const ContactForm = () => {
                   <ArrowLeft className="w-4 h-4" /> Atrás
                 </Button>
               )}
-              {step < 2 ? (
+              {step < 2 && (
                 <Button
                   type="button"
                   onClick={next}
@@ -259,13 +259,6 @@ const ContactForm = () => {
                   className="flex-1 bg-cta text-cta-foreground hover:bg-cta/90 gap-2"
                 >
                   Siguiente <ArrowRight className="w-4 h-4" />
-                </Button>
-              ) : (
-                <Button
-                  type="submit"
-                  className="flex-1 bg-cta text-cta-foreground hover:bg-cta/90 gap-2"
-                >
-                  Enviar <CheckCircle className="w-4 h-4" />
                 </Button>
               )}
             </div>
