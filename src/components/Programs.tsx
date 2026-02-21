@@ -137,10 +137,6 @@ const Programs = () => {
               </div>
             ))}
           </div>
-          <p className="text-center text-sm text-muted-foreground mt-8 flex items-center justify-center gap-2">
-            <Clock className="w-4 h-4" />
-            Si el tiempo es un problema, no te preocupes: nuestros programas cuentan con entrenamientos de 20', 30' o 40'. Nos adaptamos totalmente a tus rutinas.
-          </p>
         </div>
       </div>
 

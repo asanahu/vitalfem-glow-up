@@ -7,8 +7,7 @@ const Footer = () => (
         {/* Logo & brand */}
         <div className="flex flex-col items-start gap-3">
           <div className="flex items-center gap-2">
-            <img src={logo} alt="VitalFem" className="h-12 w-12 rounded-full object-cover shadow-sm" />
-            <span className="font-display text-xl font-bold text-primary">VitalFem</span>
+            <img src={logo} alt="VitalFem" className="h-14 object-contain" />
           </div>
           <p className="text-sm text-muted-foreground">
             Entrenamiento de fuerza para mujeres, adaptado a cada etapa de tu vida.
