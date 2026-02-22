@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dumbbell, Heart, Baby, ClipboardList, Salad, BookOpen, MessageCircle, Video as VideoIcon, Stethoscope, Smartphone, X, Clock } from "lucide-react";
 import appPreview from "@/assets/app-preview.png";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -91,6 +91,16 @@ const programs: Program[] = [
 const Programs = () => {
   const ref = useScrollAnimation();
   const [activeProgram, setActiveProgram] = useState<string | null>(null);
+
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const id = (e as CustomEvent).detail;
+      setActiveProgram(id);
+      document.getElementById("programas")?.scrollIntoView({ behavior: "smooth" });
+    };
+    window.addEventListener("open-program-detail", handler);
+    return () => window.removeEventListener("open-program-detail", handler);
+  }, []);
 
   const active = programs.find((p) => p.id === activeProgram);
 

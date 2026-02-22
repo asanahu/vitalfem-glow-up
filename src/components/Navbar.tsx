@@ -3,10 +3,14 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import logo from "@/assets/navbar-logo.png";
 
 const programs = [
-  { label: "Mujer Fit", href: "#mujer-fit" },
-  { label: "Embarazo Saludable", href: "#embarazo-saludable" },
-  { label: "Recuperación Posparto", href: "#recuperacion-posparto" },
+  { label: "Mujer Fit", href: "#mujer-fit", id: "mujer-fit" },
+  { label: "Embarazo Saludable", href: "#embarazo-saludable", id: "embarazo-saludable" },
+  { label: "Recuperación Posparto", href: "#recuperacion-posparto", id: "recuperacion-posparto" },
 ];
+
+const openProgramDetail = (id: string) => {
+  window.dispatchEvent(new CustomEvent("open-program-detail", { detail: id }));
+};
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -33,9 +37,9 @@ const Navbar = () => {
             <ul className="absolute top-full left-0 mt-2 w-52 bg-card border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2">
               {programs.map((p) => (
                 <li key={p.href}>
-                  <a href={p.href} className="block px-4 py-2 text-sm text-foreground/70 hover:text-primary hover:bg-secondary/50 transition-colors">
+                  <button onClick={() => openProgramDetail(p.id)} className="block w-full text-left px-4 py-2 text-sm text-foreground/70 hover:text-primary hover:bg-secondary/50 transition-colors">
                     {p.label}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -70,9 +74,9 @@ const Navbar = () => {
                 <ul className="flex flex-col items-center gap-2 mt-1">
                   {programs.map((p) => (
                     <li key={p.href}>
-                      <a href={p.href} onClick={() => { setOpen(false); setProgramsOpen(false); }} className="text-sm text-foreground/60 hover:text-primary transition-colors">
+                      <button onClick={() => { openProgramDetail(p.id); setOpen(false); setProgramsOpen(false); }} className="text-sm text-foreground/60 hover:text-primary transition-colors">
                         {p.label}
-                      </a>
+                      </button>
                     </li>
                   ))}
                 </ul>
