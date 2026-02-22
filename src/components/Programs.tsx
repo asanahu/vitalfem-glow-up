@@ -153,7 +153,7 @@ const Programs = () => {
               <div className="max-w-[260px] md:max-w-[320px] relative">
                 <img
                   src={appPreview}
-                  alt="App VitalFem Preview"
+                  alt="App VitalFem Preview - Planes de entrenamiento y nutrición personalizados"
                   className="w-full h-auto rounded-3xl transition-transform duration-500 hover:scale-[1.02]"
                 />
               </div>

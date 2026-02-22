@@ -63,7 +63,7 @@ const ContactForm = () => {
           <div className="space-y-6 sticky top-24 hidden lg:block pt-10">
             <img
               src={foto10}
-              alt="Pamela Alarcón"
+              alt="Pamela Alarcón - Contacto Entrenadora Personal"
               className="rounded-2xl shadow-lg w-full object-cover aspect-[3/4]"
             />
             <div className="bg-white/40 backdrop-blur-sm p-6 rounded-2xl border border-primary/5 shadow-sm">

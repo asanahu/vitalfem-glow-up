@@ -15,7 +15,7 @@ const AboutMe = () => {
           <div className="relative">
             <img
               src={foto1}
-              alt="Pamela Alarcón"
+              alt="Pamela Alarcón - Entrenadora Personal para Mujeres"
               className="rounded-2xl shadow-xl w-full max-w-md mx-auto object-cover aspect-[3/4]"
             />
             <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-accent/30 rounded-full -z-10" />
@@ -41,7 +41,7 @@ const AboutMe = () => {
                 <>
                   <img
                     src={foto2}
-                    alt="Pamela Alarcón entrenando"
+                    alt="Pamela Alarcón entrenando ejercicios de fuerza en el gimnasio"
                     className="rounded-2xl shadow-lg w-full max-w-sm mx-auto object-cover aspect-[3/4] my-6"
                   />
                   <p>
