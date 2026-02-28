@@ -19,14 +19,14 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <a href="#" className="flex items-center gap-2">
+        <a href="/" className="flex items-center gap-2">
           <img src={logo} alt="Logo VitalFem - Entrenadora Personal para Mujeres" className="h-11 object-contain" />
         </a>
 
         {/* Desktop */}
         <ul className="hidden md:flex items-center gap-8">
           <li>
-            <a href="#quien-soy" className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors">
+            <a href="/quien-soy" className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors">
               Quién soy
             </a>
           </li>
@@ -45,7 +45,7 @@ const Navbar = () => {
             </ul>
           </li>
           <li>
-            <a href="#contacto" className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors">
+            <a href="/#contacto" className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors">
               Contacto
             </a>
           </li>
@@ -62,7 +62,7 @@ const Navbar = () => {
         <div className="md:hidden bg-background border-b border-border animate-fade-in">
           <ul className="flex flex-col items-center gap-4 py-6">
             <li>
-              <a href="#quien-soy" onClick={() => setOpen(false)} className="text-base font-medium text-foreground/70 hover:text-primary transition-colors">
+              <a href="/quien-soy" onClick={() => setOpen(false)} className="text-base font-medium text-foreground/70 hover:text-primary transition-colors">
                 Quién soy
               </a>
             </li>
@@ -83,7 +83,7 @@ const Navbar = () => {
               )}
             </li>
             <li>
-              <a href="#contacto" onClick={() => setOpen(false)} className="text-base font-medium text-foreground/70 hover:text-primary transition-colors">
+              <a href="/#contacto" onClick={() => setOpen(false)} className="text-base font-medium text-foreground/70 hover:text-primary transition-colors">
                 Contacto
               </a>
             </li>
