@@ -41,19 +41,15 @@ const QuienSoy = () => {
               <p>
                 Desde 2017 trabajo en el sector del fitness, pero fue el acompañamiento en embarazo y recuperación posparto lo que dio verdadero sentido a mi profesión. Guiar a una mujer en este proceso es mucho más que entrenar: es acompañar un cambio físico y emocional.
               </p>
+              <p>
+                Así nació <strong className="text-foreground">VitalFem</strong>, una plataforma de entrenamiento y nutrición online personalizada. Aquí te ayudo a construir un estilo de vida activo, fuerte y sostenible, respetando cada etapa de tu proceso.
+              </p>
             </div>
             <img
               src={foto2}
               alt="Pamela Alarcón ejercicio con pelota"
               className="rounded-2xl shadow-lg w-full object-cover aspect-[3/4]"
             />
-
-            {/* Final paragraph spanning full width */}
-            <div className="md:col-span-2 text-center max-w-3xl mx-auto space-y-4 mt-4">
-              <p>
-                Así nació <strong className="text-foreground">VitalFem</strong>, una plataforma de entrenamiento y nutrición online personalizada. Aquí te ayudo a construir un estilo de vida activo, fuerte y sostenible, respetando cada etapa de tu proceso.
-              </p>
-            </div>
           </div>
         </div>
       </section>
