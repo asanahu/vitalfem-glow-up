@@ -28,32 +28,36 @@ const AboutMe = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Hola, soy <strong className="text-foreground">Pamela Alarcón</strong>, entrenadora especializada en acompañar a mujeres en las diferentes etapas de su vida.
+                ¡Hola! Soy <strong className="text-foreground">Pamela Alarcón</strong>, entrenadora personal especializada en <strong className="text-foreground">embarazo y posparto</strong>.
               </p>
               <p>
-                Mi trayectoria con el deporte comenzó en la danza, donde descubrí que la constancia y la disciplina son la base de cualquier logro. Tras años de competición, mi paso por el gimnasio me reveló mi verdadera vocación: el entrenamiento funcional.
-              </p>
-              <p>
-                Esta pasión me impulsó a titularme en TSEAS y a continuar mi formación superior en Ciencias de la Actividad Física y del Deporte, buscando siempre seguir progresando para cumplir mis objetivos.
+                Acompaño a mujeres que quieren sentirse fuertes, seguras y tranquilas en una de las etapas más transformadoras de sus vidas: el embarazo y el posparto. Mi objetivo es que entrenes con confianza, sabiendo que cada ejercicio tiene sentido y está adaptado a ti.
               </p>
 
               {expanded && (
-                <>
+                <div className="space-y-4">
                   <img
                     src={foto2}
                     alt="Pamela Alarcón entrenando ejercicios de fuerza en el gimnasio"
-                    className="rounded-2xl shadow-lg w-full max-w-sm mx-auto object-cover aspect-[3/4] my-6"
+                    className="rounded-2xl shadow-lg w-full max-w-sm object-cover aspect-[3/4] float-left mr-6 mb-4"
                   />
                   <p>
-                    Ese compromiso con la salud me ha llevado a profundizar en distintas modalidades de entrenamiento personal, con un <strong className="text-foreground">enfoque específico en el ámbito del embarazo y el posparto</strong>. Entiendo que nuestras necesidades cambian, por lo que he centrado mi carrera en ofrecer un soporte técnico y humano en cada ciclo vital.
+                    Nací en Argentina y me mudé a Zaragoza con 10 años. Fue mi abuela quien me apuntó a una academia de baile sin imaginar que ahí empezaría todo. La danza me llevó a competir y me enseñó algo que hoy sigue marcando mi forma de trabajar: la disciplina, la constancia y el compromiso construyen resultados reales.
                   </p>
                   <p>
-                    Desde 2016, formo parte del sector del fitness acompañando a mujeres en diferentes etapas: desde quienes buscan divertirse y desconectar a través del movimiento, mejorando sus hábitos y alcanzando objetivos de salud o imagen física, hasta futuras mamás que desean entrenar de forma segura en cada trimestre de su embarazo, o mujeres en posparto que necesitan recuperar progresivamente fuerza, movilidad y confianza, sintiéndose acompañadas en todo momento.
+                    Con el tiempo cambié el escenario por las mancuernas. Descubrí que mi vocación no era solo entrenar, sino ayudar a otras personas a superarse y a conseguir sus objetivos. Me titulé en <strong className="text-foreground">TSEAS</strong> y continué mi formación en <strong className="text-foreground">Ciencias de la Actividad Física y del Deporte (CAFYD)</strong>, especializándome en <strong className="text-foreground">entrenamiento femenino, embarazo</strong> y <strong className="text-foreground">posparto</strong>.
                   </p>
                   <p>
-                    Fruto de esta trayectoria nace <strong className="text-foreground">VitalFem by Pamela Alarcón</strong>, un servicio que, mediante una app de entrenamiento y nutrición personalizada, te ofrece el acompañamiento necesario para que cumplas tus objetivos. Todo está diseñado a medida para ti, ya sea para entrenar desde casa o en el gimnasio, convirtiendo la actividad física y los buenos hábitos en el camino hacia tu vida más saludable.
+                    Desde 2017 trabajo en el sector del fitness en diferentes ámbitos, pero con el paso de los años fue el entrenamiento en embarazo y recuperación posparto lo que terminó de darle verdadero sentido a mi profesión. Acompañar a una mujer a mantenerse activa durante el embarazo, prepararse físicamente para el parto y conseguir una recuperación posparto es mucho más que entrenar: es guiarla en un proceso de cambio físico y emocional.
                   </p>
-                </>
+                  <div className="clear-both" />
+                  <p>
+                    Y por seguir apostando por ello nació <strong className="text-foreground">VitalFem</strong>, una plataforma de entrenamiento y nutrición online personalizada. Aquí encontrarás un acompañamiento adaptado a ti, tanto si entrenas en casa como en el gimnasio. Mi objetivo es ayudarte a construir un estilo de vida activo, fuerte y sostenible, respetando cada etapa de tu proceso.
+                  </p>
+                  <p>
+                    Si estás aquí porque buscas sentirte mejor, acompañada, recuperarte o simplemente vivir esta etapa con más calma y confianza, estaré encantada de acompañarte.
+                  </p>
+                </div>
               )}
 
               <Button
