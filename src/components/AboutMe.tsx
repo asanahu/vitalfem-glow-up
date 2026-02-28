@@ -1,12 +1,11 @@
 import { useState } from "react";
 import foto1 from "@/assets/foto-1.JPG";
-import foto2 from "@/assets/foto-2.JPG";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const AboutMe = () => {
   const ref = useScrollAnimation();
-  const [expanded, setExpanded] = useState(false);
 
   return (
     <section id="quien-soy" className="py-20 bg-secondary/30">
@@ -35,50 +34,15 @@ const AboutMe = () => {
               </p>
 
               <Button
+                asChild
                 variant="outline"
-                onClick={() => setExpanded(!expanded)}
                 className="mt-2 border-accent text-accent-foreground hover:bg-accent/20"
               >
-                {expanded ? "Leer menos" : "Leer más sobre mi historia"}
+                <Link to="/quien-soy">Leer más sobre mi historia</Link>
               </Button>
             </div>
           </div>
         </div>
-
-        {expanded && (
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-start text-muted-foreground leading-relaxed">
-            {/* Top-left: image */}
-            <img
-              src={foto1}
-              alt="Pamela Alarcón entrenando"
-              className="rounded-2xl shadow-lg w-full object-cover aspect-[3/4]"
-            />
-            {/* Top-right: text */}
-            <div className="space-y-4 flex flex-col justify-center h-full">
-              <p>
-                Nací en Argentina y me mudé a Zaragoza con 10 años. Mi historia con el deporte comenzó en la danza, llegando a competir a nivel nacional. Esto me enseñó disciplina, constancia y compromiso.
-              </p>
-              <p>
-                Con el tiempo cambié el escenario por las mancuernas y descubrí que mi vocación era ayudar a otras personas a superarse a través del entrenamiento. Me titulé en <strong className="text-foreground">TSEAS</strong> y continué mi formación en <strong className="text-foreground">Ciencias de la Actividad Física y del Deporte (CAFYD)</strong>, especializándome en <strong className="text-foreground">entrenamiento femenino</strong>, <strong className="text-foreground">embarazo</strong> y <strong className="text-foreground">posparto</strong>.
-              </p>
-            </div>
-            {/* Bottom-left: text */}
-            <div className="space-y-4 flex flex-col justify-center h-full">
-              <p>
-                Desde 2017 trabajo en el sector del fitness, pero fue el acompañamiento en embarazo y recuperación posparto lo que dio verdadero sentido a mi profesión. Guiar a una mujer en este proceso es mucho más que entrenar: es acompañar un cambio físico y emocional.
-              </p>
-              <p>
-                Así nació <strong className="text-foreground">VitalFem</strong>, una plataforma de entrenamiento y nutrición online personalizada. Aquí te ayudo a construir un estilo de vida activo, fuerte y sostenible, respetando cada etapa de tu proceso.
-              </p>
-            </div>
-            {/* Bottom-right: image */}
-            <img
-              src={foto2}
-              alt="Pamela Alarcón ejercicio con pelota"
-              className="rounded-2xl shadow-lg w-full object-cover aspect-[3/4]"
-            />
-          </div>
-        )}
       </div>
     </section>
   );
