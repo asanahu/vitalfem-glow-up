@@ -41,7 +41,7 @@ const Navbar = () => {
             </ul>
           </li>
           <li>
-            <a href="/#contacto" className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors">
+            <a href="/contacto" className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors">
               Contacto
             </a>
           </li>
@@ -79,7 +79,7 @@ const Navbar = () => {
               )}
             </li>
             <li>
-              <a href="/#contacto" onClick={() => setOpen(false)} className="text-base font-medium text-foreground/70 hover:text-primary transition-colors">
+              <a href="/contacto" onClick={() => setOpen(false)} className="text-base font-medium text-foreground/70 hover:text-primary transition-colors">
                 Contacto
               </a>
             </li>
