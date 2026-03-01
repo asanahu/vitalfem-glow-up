@@ -15,19 +15,22 @@ const programs = [
     id: "mujer-fit",
     title: "Mujer Fit",
     icon: Dumbbell,
-    summary: "Mejora tu salud y crea hábitos sostenibles mientras fortaleces tu cuerpo con entrenamientos de fuerza real, totalmente adaptados a tu estilo de vida y a tu punto de partida.",
+    subtitle: "Gana fuerza, mejora tu salud y crea hábitos sostenibles.",
+    summary: "Un plan de entrenamiento adaptado a tu nivel, tu tiempo y tu estilo de vida. Sin rutinas genéricas, sin improvisar.",
   },
   {
     id: "embarazo-saludable",
     title: "Embarazo Saludable",
     icon: Heart,
-    summary: "Entrena segura en cada trimestre con un plan personalizado y ajustado a tus necesidades. Manténte activa, lidiando con posibles molestias y preparando tu cuerpo para el parto y una buena recuperación posparto.",
+    subtitle: "Entrena segura en cada trimestre con un programa adaptado a tus necesidades.",
+    summary: "Mantente activa, gestiona posibles molestias y prepara tu cuerpo para el parto y la recuperación posparto.",
   },
   {
     id: "recuperacion-posparto",
     title: "Recuperación Posparto",
     icon: Baby,
-    summary: "Un acompañamiento cercano diseñado para trabajar la funcionalidad del abdomen y el suelo pélvico de forma respetuosa con tu cuerpo. Recupera tu fuerza, movilidad y confianza de forma progresiva.",
+    subtitle: "Recupera tu fuerza empezando desde la base.",
+    summary: "Trabajamos abdomen y suelo pélvico de forma progresiva y respetuosa para que vuelvas a moverte con confianza y seguridad.",
   },
 ];
 
@@ -56,6 +59,7 @@ const Programs = () => {
               <h3 className="text-xl font-display font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
                 {p.title}
               </h3>
+              {p.subtitle && <p className="text-foreground font-medium text-sm mb-1">{p.subtitle}</p>}
               <p className="text-muted-foreground text-sm leading-relaxed flex-1">{p.summary}</p>
               <a
                 href={`/${p.id}`}
