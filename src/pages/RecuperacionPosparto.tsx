@@ -66,7 +66,7 @@ const RecuperacionPosparto = () => (
         </div>
 
         <div className="text-center">
-          <a href="/#contacto" className="inline-block bg-cta text-cta-foreground font-semibold px-8 py-3 rounded-lg hover:opacity-90 transition-opacity shadow-lg">
+          <a href="/contacto" className="inline-block bg-cta text-cta-foreground font-semibold px-8 py-3 rounded-lg hover:opacity-90 transition-opacity shadow-lg">
             Quiero empezar ya
           </a>
         </div>
