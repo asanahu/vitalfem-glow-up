@@ -16,10 +16,10 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-2xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-tight mb-6 animate-fade-in-up">
-            Entrena segura en tu embarazo, llega fuerte al parto y recupera tu bienestar en el posparto
+            Entrenamiento seguro y progresivo en el embarazo y posparto
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            Planes de entrenamiento y nutrición personalizados. Porque cada mujer merece un acompañamiento profesional que entienda su cuerpo y sus objetivos.
+            Planes de entrenamiento y nutrición personalizados, porque cada mujer merece un acompañamiento adaptado a su etapa y objetivos.
           </p>
           <a
             href="#contacto"
