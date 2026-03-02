@@ -1,4 +1,4 @@
-import { Dumbbell, Heart, Baby, Salad, BookOpen, MessageCircle, Video as VideoIcon } from "lucide-react";
+import { Dumbbell, Baby, Salad, BookOpen, MessageCircle, Video as VideoIcon } from "lucide-react";
 import appPreview from "@/assets/app-preview.png";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -21,7 +21,7 @@ const programs = [
   {
     id: "embarazo-saludable",
     title: "Embarazo Saludable",
-    icon: Heart,
+    icon: null,
     subtitle: "Entrena segura en cada trimestre con un programa adaptado a tus necesidades.",
     summary: "Mantente activa, gestiona posibles molestias y prepara tu cuerpo para el parto y la recuperación posparto.",
   },
@@ -54,13 +54,25 @@ const Programs = () => {
           {programs.map((p) => (
             <div key={p.id} id={p.id} className="bg-card border border-border rounded-2xl p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col">
               <div className="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-                <p.icon className="w-7 h-7 text-primary" />
+                {p.icon ? (
+                  <p.icon className="w-7 h-7 text-primary" />
+                ) : (
+                  <svg className="w-7 h-7 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="13" cy="3.5" r="2" />
+                    <path d="M14 5.5c0 0-1.5 1-2 3s-.5 4.5-.5 4.5" />
+                    <path d="M11.5 13c0 0 1 .5 2.5 .5s2-.5 2-.5" />
+                    <path d="M11 13.5c-.5 1.5-1 3.5-1 5s.5 2 .5 2" />
+                    <path d="M14.5 13.5c.5 1.5.5 3.5.5 5s-.5 2-.5 2" />
+                    <ellipse cx="13" cy="10" rx="3" ry="3.5" />
+                  </svg>
+                )}
               </div>
               <h3 className="text-xl font-display font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
                 {p.title}
               </h3>
-              {p.subtitle && <p className="text-foreground font-medium text-sm mb-1">{p.subtitle}</p>}
-              <p className="text-muted-foreground text-sm leading-relaxed flex-1">{p.summary}</p>
+              <p className="text-muted-foreground text-sm leading-relaxed flex-1">
+                {p.subtitle && <>{p.subtitle} </>}{p.summary}
+              </p>
               <a
                 href={`/${p.id}`}
                 className="mt-6 text-sm font-semibold text-primary hover:text-accent-foreground transition-colors self-start underline underline-offset-4"
