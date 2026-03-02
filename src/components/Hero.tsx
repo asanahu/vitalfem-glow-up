@@ -1,4 +1,4 @@
-import heroBackground from "@/assets/fuerza-hero.png";
+import heroBackground from "@/assets/hero-new.png";
 
 const Hero = () => {
   return (
@@ -7,18 +7,19 @@ const Hero = () => {
         <img
           src={heroBackground}
           alt="Pamela Alarcón - Entrenadora personal"
-          className="w-full h-full object-cover object-top"
+          className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/50 md:to-background/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent md:hidden" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-2xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-tight mb-6 animate-fade-in-up">
-            Entrenamiento de fuerza para mujeres, adaptado a cada etapa de tu vida
+            Entrena segura en tu embarazo, llega fuerte al parto y recupera tu bienestar en el posparto
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            Planes de entrenamiento y nutrición 100% personalizados. Porque cada mujer merece un acompañamiento profesional que entienda su cuerpo y sus objetivos.
+            Planes de entrenamiento y nutrición personalizados. Porque cada mujer merece un acompañamiento profesional que entienda su cuerpo y sus objetivos.
           </p>
           <a
             href="#contacto"
