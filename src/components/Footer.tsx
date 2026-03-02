@@ -31,8 +31,9 @@ const Footer = () => (
           <h4 className="font-semibold text-foreground mb-3 text-sm">Contacto</h4>
           <p className="text-sm text-muted-foreground">info@vitalfem.es</p>
           <div className="mt-4 text-xs text-muted-foreground space-y-1">
-            <p><a href="#" className="hover:text-primary transition-colors">Política de privacidad</a></p>
-            <p><a href="#" className="hover:text-primary transition-colors">Aviso legal</a></p>
+            <p><a href="/politica-privacidad" className="hover:text-primary transition-colors">Política de privacidad</a></p>
+            <p><a href="/aviso-legal" className="hover:text-primary transition-colors">Aviso legal</a></p>
+            <p><a href="/politica-cookies" className="hover:text-primary transition-colors">Política de cookies</a></p>
           </div>
         </div>
       </div>
