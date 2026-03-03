@@ -7,13 +7,13 @@ import foto4 from "@/assets/foto-4.png";
 import mujerFitNew from "@/assets/mujer-fit-new.png";
 
 const features = [
-  { icon: ClipboardList, title: "Planificación Personalizada", text: "Rutinas diseñadas según tu nivel actual, tus objetivos, el material del que dispongas y lo que realmente te gusta. Entrenar no tiene que resultarte aburrido." },
-  { icon: Heart, title: "Enfoque en Salud y Fuerza", text: "Mejora tu composición corporal y gana vitalidad con un método basado en la ciencia y la técnica correcta." },
-  { icon: Salad, title: "Nutrición y Hábitos", text: "Dieta personalizada junto a herramientas para que aprendas a gestionar la comida y los antojos, logrando cambios que se mantienen en el tiempo." },
-  { icon: MessageCircle, title: "Seguimiento por WhatsApp", text: "Estaremos en continua comunicación para que nunca te sientas sola en el proceso." },
-  { icon: VideoIcon, title: "Videollamadas de Control", text: "Cada 3 semanas nos veremos para comentar tus avances, resolver dudas y planificar tus siguientes pasos." },
-  { icon: Stethoscope, title: "Red de Salud VitalFem (Fisioterapia)", text: "Soporte de una fisioterapeuta especializada en suelo pélvico y salud femenina. Valoraciones online personalizadas. Servicio premium disponible bajo consulta." },
-  { icon: Smartphone, title: "App VitalFem", text: "Todo tu progreso, vídeos de ejercicios y contenido exclusivo para tu etapa, siempre a mano en el mismo lugar." },
+  { icon: ClipboardList, title: "Planificación personalizada", text: "Entrenamientos diseñados según tu punto de partida, tus objetivos y el material del que dispones. Cada ejercicio tiene un propósito." },
+  { icon: Heart, title: "Enfoque en fuerza y salud", text: "Mejora tu composición corporal, tu rendimiento y tu vitalidad con una metodología basada en evidencia y buena técnica." },
+  { icon: Salad, title: "Nutrición personalizada", text: "Plan adaptado a ti, sin extremos. Aprenderás a gestionar tu alimentación de forma práctica y sostenible." },
+  { icon: MessageCircle, title: "Seguimiento continuo por WhatsApp", text: "Contacto directo para resolver dudas y ajustar el plan cuando sea necesario." },
+  { icon: VideoIcon, title: "Videollamadas cada 3 semanas", text: "Revisión de avances, ajustes y planificación de los siguientes pasos." },
+  { icon: Stethoscope, title: "Red de salud VitalFem", text: "Acceso a fisioterapia especializada en suelo pélvico y salud femenina (servicio premium bajo consulta)." },
+  { icon: Smartphone, title: "App VitalFem", text: "Todo tu entrenamiento, vídeos explicativos y seguimiento en un mismo lugar." },
 ];
 
 const photos = [foto3, foto4, mujerFitNew];
@@ -23,51 +23,64 @@ const MujerFit = () => (
     <Navbar />
     <section className="pt-32 pb-20 bg-secondary/30">
       <div className="container mx-auto px-4 max-w-4xl">
-        <h1 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4 text-center">
-          Mujer Fit
-        </h1>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Mejora tu salud y crea hábitos sostenibles mientras fortaleces tu cuerpo con entrenamientos de fuerza real, totalmente adaptados a tu estilo de vida y a tu punto de partida.
-        </p>
+         <h1 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4 text-center">
+           Entrena con estructura. Consigue resultados reales.
+         </h1>
+         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+           Si quieres dejar de improvisar y empezar a entrenar con un plan claro, este programa es para ti.
+         </p>
 
-        {/* Photos */}
-        <div className="grid grid-cols-3 gap-4 mb-12">
-          {photos.map((photo, i) => (
-            <img key={i} src={photo} alt={`Mujer Fit foto ${i + 1}`} className="rounded-xl w-full object-cover aspect-[3/4]" />
-          ))}
-        </div>
+         {/* Photos */}
+         <div className="grid grid-cols-3 gap-4 mb-12">
+           {photos.map((photo, i) => (
+             <img key={i} src={photo} alt={`Mujer Fit foto ${i + 1}`} className="rounded-xl w-full object-cover aspect-[3/4]" />
+           ))}
+         </div>
 
-        {/* Intro */}
-        <div className="mb-12">
-          <h2 className="font-display font-bold text-xl text-foreground mb-3">Lo que te ofrece este programa</h2>
-          <p className="text-muted-foreground leading-relaxed">
-            Lleva tu entrenamiento al siguiente nivel. En el programa Mujer Fit nos alejamos de las rutinas genéricas. Aquí, el entrenamiento de fuerza y funcional se adapta a ti, tanto si entrenas en casa como en el gimnasio, para que consigas resultados reales sin que el deporte sea una carga en tu día a día.
-          </p>
-        </div>
+         {/* Intro */}
+         <div className="mb-12">
+           <h2 className="font-display font-bold text-xl text-foreground mb-3">Lo que te ofrece este programa</h2>
+           <p className="text-muted-foreground leading-relaxed mb-4">
+             Mujer Fit es un servicio de entrenamiento de fuerza totalmente personalizado, adaptado a tu nivel, tu disponibilidad y tu estilo de vida. Tanto si entrenas en casa como en el gimnasio, tendrás una planificación diseñada para que avances sin que el deporte se convierta en una obligación más.
+           </p>
+           <p className="text-muted-foreground leading-relaxed">
+             Aquí no hacemos rutinas genéricas. Entrenas con criterio, con seguimiento y con un objetivo claro: sentirte más fuerte, más ágil y con más energía.
+           </p>
+         </div>
 
-        {/* Features */}
-        <h2 className="font-display font-bold text-xl text-foreground mb-6">¿Qué incluye el programa?</h2>
-        <div className="space-y-5 mb-12">
-          {features.map((f) => (
-            <div key={f.title} className="flex gap-4">
-              <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center shrink-0 mt-0.5">
-                <f.icon className="w-5 h-5 text-primary" />
-              </div>
-              <div>
-                <p className="font-semibold text-foreground text-sm">{f.title}</p>
-                <p className="text-muted-foreground text-sm leading-relaxed">{f.text}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+         {/* Features */}
+         <h2 className="font-display font-bold text-xl text-foreground mb-6">¿Qué incluye?</h2>
+         <div className="space-y-5 mb-12">
+           {features.map((f) => (
+             <div key={f.title} className="flex gap-4">
+               <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center shrink-0 mt-0.5">
+                 <f.icon className="w-5 h-5 text-primary" />
+               </div>
+               <div>
+                 <p className="font-semibold text-foreground text-sm">{f.title}</p>
+                 <p className="text-muted-foreground text-sm leading-relaxed">{f.text}</p>
+               </div>
+             </div>
+           ))}
+         </div>
 
-        {/* For you */}
-        <div className="bg-secondary/50 rounded-xl p-6 mb-8">
-          <h2 className="font-display font-bold text-foreground mb-2">¿Es para ti?</h2>
-          <p className="text-muted-foreground text-sm leading-relaxed">
-            Es el programa ideal si buscas dejar atrás la improvisación, quieres sentirte fuerte y ágil, y necesitas un plan profesional que respete tus tiempos y tu ritmo de vida actual.
-          </p>
-        </div>
+         {/* For you */}
+         <div className="bg-secondary/50 rounded-xl p-6 mb-8">
+           <h2 className="font-display font-bold text-foreground mb-2">¿Es para ti?</h2>
+           <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+             Este programa es para ti si…
+           </p>
+           <ul className="space-y-2 text-muted-foreground text-sm leading-relaxed">
+             <li>✔️ Estás cansada de improvisar y quieres un plan claro que te diga qué hacer y por qué.</li>
+             <li>✔️ Quieres ganar fuerza y mejorar tu cuerpo sin vivir para el gimnasio.</li>
+             <li>✔️ Buscas resultados reales, pero sin dietas extremas ni entrenamientos imposibles.</li>
+             <li>✔️ Necesitas estructura, seguimiento y a alguien que te guíe durante el proceso.</li>
+             <li>✔️ Quieres sentirte más segura, con más energía y en control de tu progreso.</li>
+           </ul>
+           <p className="text-muted-foreground text-sm leading-relaxed mt-4 italic">
+             Si te has identificado con varios puntos, probablemente este sea tu siguiente paso.
+           </p>
+         </div>
 
         <div className="text-center">
           <a href="/contacto" className="inline-block bg-cta text-cta-foreground font-semibold px-8 py-3 rounded-lg hover:opacity-90 transition-opacity shadow-lg">
