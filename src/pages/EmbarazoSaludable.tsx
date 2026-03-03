@@ -1,18 +1,19 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import { ClipboardList, ShieldCheck, Activity, MessageCircle, Video as VideoIcon, Smartphone } from "lucide-react";
+import { ClipboardList, Heart, Salad, MessageCircle, Video as VideoIcon, Stethoscope, Smartphone } from "lucide-react";
 import embarazo1 from "@/assets/embarazo-1.png";
 import embarazo2 from "@/assets/embarazo-2.png";
 import embarazo3 from "@/assets/embarazo-3.jpeg";
 
 const features = [
-  { icon: ClipboardList, title: "Planificación personalizada por trimestre", text: "Entrenamientos adaptados a los cambios físicos del embarazo y a tu experiencia previa." },
-  { icon: ShieldCheck, title: "Trabajo específico de suelo pélvico y core", text: "Fortalece desde la base para proteger tu abdomen y preparar el cuerpo para el parto." },
-  { icon: Activity, title: "Gestión de molestias habituales", text: "Ejercicios adaptados para aliviar tensión en espalda, cadera y pelvis." },
-  { icon: MessageCircle, title: "Seguimiento continuo por WhatsApp", text: "Resolución de dudas y ajustes según cómo te vayas sintiendo." },
-  { icon: VideoIcon, title: "Videollamadas de control", text: "Revisamos evolución, sensaciones y adaptamos el plan si es necesario." },
-  { icon: Smartphone, title: "App VitalFem", text: "Tu planificación, vídeos y seguimiento siempre accesibles." },
+  { icon: ClipboardList, title: "Planificación Personalizada", text: "Rutinas diseñadas según el trimestre en el que te encuentres, tus sensaciones, el material del que dispongas y tus objetivos específicos para esta etapa." },
+  { icon: Heart, title: "Enfoque en Salud y Fuerza", text: "Manténte activa y prepara tu cuerpo para el parto con un método basado en la ciencia y la técnica correcta; esto será clave para tu futura recuperación posparto." },
+  { icon: Salad, title: "Nutrición y Hábitos", text: "Dieta personalizada junto a herramientas para que aprendas a gestionar los momentos de esta etapa. Buscamos educarte para que lleves una alimentación saludable que se pueda mantener en el tiempo." },
+  { icon: MessageCircle, title: "Seguimiento por WhatsApp", text: "Estaremos en continua comunicación para que nunca te sientas sola en el proceso." },
+  { icon: VideoIcon, title: "Videollamadas de Control", text: "Cada 3 semanas nos veremos para comentar tus avances, resolver dudas y planificar tus siguientes pasos." },
+  { icon: Stethoscope, title: "Red de Salud VitalFem (Fisioterapia)", text: "Soporte de una fisioterapeuta especializada en suelo pélvico y salud femenina. Valoraciones online personalizadas. Servicio premium disponible bajo consulta." },
+  { icon: Smartphone, title: "App VitalFem", text: "Todo tu progreso, vídeos de ejercicios y contenido exclusivo para tu etapa, siempre a mano en el mismo lugar." },
 ];
 
 const photos = [embarazo1, embarazo2, embarazo3];
@@ -23,10 +24,10 @@ const EmbarazoSaludable = () => (
     <section className="pt-32 pb-20 bg-secondary/30">
       <div className="container mx-auto px-4 max-w-4xl">
         <h1 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4 text-center">
-          Entrena con seguridad en cada etapa de tu embarazo.
+          Embarazo Saludable
         </h1>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Tu cuerpo está cambiando, y tu entrenamiento también debe hacerlo.
+          Entrena segura en cada trimestre con un plan personalizado y ajustado a tus necesidades. Manténte activa, lidiando con posibles molestias y preparando tu cuerpo para el parto y una buena recuperación posparto.
         </p>
 
         <div className="grid grid-cols-3 gap-4 mb-12">
@@ -37,18 +38,12 @@ const EmbarazoSaludable = () => (
 
         <div className="mb-12">
           <h2 className="font-display font-bold text-xl text-foreground mb-3">Lo que te ofrece este programa</h2>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            Embarazo Saludable es un programa diseñado para que te mantengas activa con confianza, sabiendo que cada ejercicio está adaptado a tu trimestre, tu nivel y tus sensaciones.
-          </p>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            No se trata solo de "no dejar de moverte", sino de entrenar con sentido: gestionar molestias, fortalecer lo que realmente necesitas y preparar tu cuerpo para el parto y la recuperación posterior.
-          </p>
           <p className="text-muted-foreground leading-relaxed">
-            Entrenas con estructura, acompañamiento y la tranquilidad de estar haciendo lo adecuado en cada momento.
+            Vive un embarazo consciente, fuerte y seguro. El programa Embarazo Saludable está diseñado para acompañarte en este viaje tan especial, eliminando las dudas sobre qué puedes o no hacer. Adaptamos el entrenamiento de fuerza a los cambios de cada trimestre para que te sientas ágil, reduzcas las molestias comunes, llegues al parto con la mejor preparación física posible y favorezcas tu recuperación posparto.
           </p>
         </div>
 
-        <h2 className="font-display font-bold text-xl text-foreground mb-6">¿Qué incluye?</h2>
+        <h2 className="font-display font-bold text-xl text-foreground mb-6">¿Qué incluye el programa?</h2>
         <div className="space-y-5 mb-12">
           {features.map((f) => (
             <div key={f.title} className="flex gap-4">
@@ -65,18 +60,8 @@ const EmbarazoSaludable = () => (
 
         <div className="bg-secondary/50 rounded-xl p-6 mb-8">
           <h2 className="font-display font-bold text-foreground mb-2">¿Es para ti?</h2>
-          <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-            Este programa es para ti si…
-          </p>
-          <ul className="space-y-2 text-muted-foreground text-sm leading-relaxed">
-            <li>✔️ Estás embarazada y quieres mantenerte activa sin miedo a hacerlo mal.</li>
-            <li>✔️ Te preocupa cómo entrenar de forma segura en cada trimestre.</li>
-            <li>✔️ Quieres preparar tu cuerpo para el parto desde la fuerza y el control.</li>
-            <li>✔️ Buscas acompañamiento profesional y seguimiento real.</li>
-            <li>✔️ No quieres dejar tu salud en manos de entrenamientos genéricos.</li>
-          </ul>
-          <p className="text-muted-foreground text-sm leading-relaxed mt-4 italic">
-            Si quieres vivir tu embarazo sintiéndote fuerte y acompañada, este programa es para ti.
+          <p className="text-muted-foreground text-sm leading-relaxed">
+            Es el programa ideal si quieres vivir un embarazo activo y saludable, si buscas la tranquilidad de entrenar sin miedos bajo supervisión profesional y deseas prepararte físicamente para el momento del parto.
           </p>
         </div>
 

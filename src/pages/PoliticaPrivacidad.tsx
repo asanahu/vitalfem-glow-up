@@ -5,9 +5,9 @@ const PoliticaPrivacidad = () => (
   <>
     <Navbar />
     <main className="pt-24 pb-16">
-      <div className="container mx-auto px-4 max-w-3xl text-foreground [&_h2]:text-xl [&_h2]:font-display [&_h2]:font-bold [&_h2]:text-foreground [&_h2]:mt-10 [&_h2]:mb-4 [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_p]:mb-4 [&_li]:text-muted-foreground [&_a]:text-primary [&_ul]:mb-4 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-1">
-        <h1 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-2">Política de Privacidad</h1>
-        <p className="text-sm text-muted-foreground mb-8">Última actualización: enero de 2026</p>
+      <div className="container mx-auto px-4 max-w-3xl prose prose-sm sm:prose text-foreground prose-headings:text-foreground prose-p:text-muted-foreground prose-li:text-muted-foreground prose-a:text-primary">
+        <h1>Política de Privacidad</h1>
+        <p className="text-sm text-muted-foreground">Última actualización: enero de 2026</p>
 
         <h2>Responsable del tratamiento</h2>
         <p>En cumplimiento del Reglamento (UE) 2016/679 (RGPD) y de la Ley Orgánica 3/2018 de Protección de Datos (LOPDGDD), te informo de que los datos que me facilites serán tratados por Pamela Soledad Alarcón, con DNI Y2472704B, domiciliada en C/ Marqués de la Cadena 52, Esc. Izq. 7G, y con email de contacto pamela.alarcon@vitalfem.es.</p>
