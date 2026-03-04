@@ -59,21 +59,21 @@ const ContactForm = () => {
           Agenda tu videollamada conmigo directamente a través del calendario
         </p>
 
-        <div className="grid lg:grid-cols-2 gap-0 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {/* Left: Image - sticky, matching Calendly height */}
-          <div className="hidden lg:block sticky top-16 self-start" style={{ height: "700px" }}>
+          <div className="hidden lg:block sticky top-20 self-start" style={{ height: "680px" }}>
             <img
               src={foto10}
               alt="Pamela Alarcón - Contacto Entrenadora Personal"
-              className="w-full h-full object-cover rounded-l-2xl"
+              className="w-full h-full object-cover rounded-2xl"
             />
           </div>
 
           {/* Right: Calendly - sticky, same height */}
           <div
             ref={calendlyRef}
-            className="w-full overflow-hidden bg-transparent sticky top-16 self-start lg:rounded-l-none rounded-2xl lg:rounded-r-2xl"
-            style={{ minWidth: "320px", height: "700px" }}
+            className="w-full overflow-hidden bg-transparent sticky top-20 self-start rounded-2xl"
+            style={{ minWidth: "320px", height: "680px" }}
           >
             <div className="w-full h-full flex items-center justify-center">
               <div className="flex flex-col items-center gap-2 text-muted-foreground">
