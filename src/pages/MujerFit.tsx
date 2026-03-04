@@ -7,13 +7,12 @@ import foto4 from "@/assets/foto-4.png";
 import mujerFitNew from "@/assets/mujer-fit-new.png";
 
 const features = [
-  { icon: ClipboardList, title: "Planificación personalizada", text: "Entrenamientos diseñados según tu punto de partida, tus objetivos y el material del que dispones. Cada ejercicio tiene un propósito." },
-  { icon: Heart, title: "Enfoque en fuerza y salud", text: "Mejora tu composición corporal, tu rendimiento y tu vitalidad con una metodología basada en evidencia y buena técnica." },
-  { icon: Salad, title: "Nutrición personalizada", text: "Plan adaptado a ti, sin extremos. Aprenderás a gestionar tu alimentación de forma práctica y sostenible." },
+  { icon: ClipboardList, title: "Planificación personalizada", text: "Entrenamientos diseñados según tu punto de partida, tus objetivos y el material del que dispones." },
+  { icon: Salad, title: "Nutrición personalizada", text: "Dieta personalizada junto a herramientas que te ayudarán a gestionar tu alimentación de forma práctica y sostenible." },
   { icon: MessageCircle, title: "Seguimiento continuo por WhatsApp", text: "Contacto directo para resolver dudas y ajustar el plan cuando sea necesario." },
-  { icon: VideoIcon, title: "Videollamadas cada 3 semanas", text: "Revisión de avances, ajustes y planificación de los siguientes pasos." },
-  { icon: Stethoscope, title: "Red de salud VitalFem", text: "Acceso a fisioterapia especializada en suelo pélvico y salud femenina (servicio premium bajo consulta)." },
-  { icon: Smartphone, title: "App VitalFem", text: "Todo tu entrenamiento, vídeos explicativos y seguimiento en un mismo lugar." },
+  { icon: VideoIcon, title: "Videollamadas de control", text: "Revisión de avances, ajustes y planificación de los siguientes pasos." },
+  { icon: Smartphone, title: "App VitalFem", text: "Todos tus entrenamientos, procesos y material exclusivo en un mismo lugar." },
+  { icon: Stethoscope, title: "Red de salud VitalFem", text: "Acceso a valoración online de fisioterapia especializada en suelo pélvico y salud femenina (servicio premium bajo consulta)." },
 ];
 
 const photos = [foto3, foto4, mujerFitNew];
@@ -40,12 +39,12 @@ const MujerFit = () => (
          {/* Intro */}
          <div className="mb-12">
            <h2 className="font-display font-bold text-xl text-foreground mb-3">Lo que te ofrece este programa</h2>
-           <p className="text-muted-foreground leading-relaxed mb-4">
-             Mujer Fit es un servicio de entrenamiento de fuerza totalmente personalizado, adaptado a tu nivel, tu disponibilidad y tu estilo de vida. Tanto si entrenas en casa como en el gimnasio, tendrás una planificación diseñada para que avances sin que el deporte se convierta en una obligación más.
-           </p>
-           <p className="text-muted-foreground leading-relaxed">
-             Aquí no hacemos rutinas genéricas. Entrenas con criterio, con seguimiento y con un objetivo claro: sentirte más fuerte, más ágil y con más energía.
-           </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Mujer Fit es un servicio de entrenamiento de fuerza totalmente personalizado, adaptado a tu nivel, disponibilidad y estilo de vida. Ya sea en casa o en el gimnasio, tu planificación se adapta a ti, no tú al plan.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Aquí no hacemos rutinas genéricas. Entrenas con criterio y seguimiento para un objetivo claro: sentirte más fuerte, más ágil y con más energía.
+            </p>
          </div>
 
          {/* Features */}
@@ -71,14 +70,14 @@ const MujerFit = () => (
              Este programa es para ti si…
            </p>
            <ul className="space-y-2 text-muted-foreground text-sm leading-relaxed">
-             <li>✔️ Estás cansada de improvisar y quieres un plan claro que te diga qué hacer y por qué.</li>
-             <li>✔️ Quieres ganar fuerza y mejorar tu cuerpo sin vivir para el gimnasio.</li>
-             <li>✔️ Buscas resultados reales, pero sin dietas extremas ni entrenamientos imposibles.</li>
-             <li>✔️ Necesitas estructura, seguimiento y a alguien que te guíe durante el proceso.</li>
-             <li>✔️ Quieres sentirte más segura, con más energía y en control de tu progreso.</li>
-           </ul>
-           <p className="text-muted-foreground text-sm leading-relaxed mt-4 italic">
-             Si te has identificado con varios puntos, probablemente este sea tu siguiente paso.
+              <li>✔️ Estás cansada de improvisar y quieres un plan claro que te diga por dónde empezar.</li>
+              <li>✔️ Quieres ganar fuerza y mejorar tus hábitos de una manera sostenible.</li>
+              <li>✔️ Buscas resultados reales, pero sin dietas extremas ni entrenamientos imposibles.</li>
+              <li>✔️ Necesitas estructura, seguimiento y a alguien que te guíe durante el proceso.</li>
+              <li>✔️ Quieres sentirte más segura, con más energía y mejorar tus hábitos.</li>
+            </ul>
+            <p className="text-muted-foreground text-sm leading-relaxed mt-4 italic">
+              Si te has identificado con alguno de estos puntos, estás a solo un paso de comenzar.
            </p>
          </div>
 
