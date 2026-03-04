@@ -57,13 +57,14 @@ const Programs = () => {
                 {p.icon ? (
                   <p.icon className="w-7 h-7 text-primary" />
                 ) : (
-                  <svg className="w-7 h-7 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="13" cy="3.5" r="2" />
-                    <path d="M14 5.5c0 0-1.5 1-2 3s-.5 4.5-.5 4.5" />
-                    <path d="M11.5 13c0 0 1 .5 2.5 .5s2-.5 2-.5" />
-                    <path d="M11 13.5c-.5 1.5-1 3.5-1 5s.5 2 .5 2" />
-                    <path d="M14.5 13.5c.5 1.5.5 3.5.5 5s-.5 2-.5 2" />
-                    <ellipse cx="13" cy="10" rx="3" ry="3.5" />
+                  <svg className="w-7 h-7 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="3.2" r="2.2" />
+                    <path d="M13.5 5.4c.3.8.4 1.8.2 2.8-.3 1.2-.5 2.2-.3 3.2.3 1.2 1 2.2 1.8 3.2" />
+                    <path d="M10.5 5.4c-.5 1-.8 2.2-.8 3.5 0 1.8.5 3.5 1.2 5" />
+                    <ellipse cx="11.8" cy="12" rx="3.2" ry="4.2" />
+                    <path d="M9.5 14.5c-.2.8-.3 1.5-.2 2.2.1 1 .4 2 .7 3.2l.5 1.6" />
+                    <path d="M14.2 14.5c.2.8.3 1.5.2 2.2-.1 1-.3 2-.5 3.2l-.4 1.6" />
+                    <path d="M14.8 11c.6-.2 1.2-.1 1.5.3" />
                   </svg>
                 )}
               </div>
