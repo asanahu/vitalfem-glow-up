@@ -59,36 +59,21 @@ const ContactForm = () => {
           Agenda tu videollamada conmigo directamente a través del calendario
         </p>
 
-        <div className="grid lg:grid-cols-[380px_1fr] gap-12 max-w-6xl mx-auto items-start">
-          <div className="space-y-6 sticky top-24 hidden lg:block pt-10">
+        <div className="grid lg:grid-cols-2 gap-0 max-w-6xl mx-auto">
+          {/* Left: Image - sticky, matching Calendly height */}
+          <div className="hidden lg:block sticky top-16 self-start" style={{ height: "700px" }}>
             <img
               src={foto10}
               alt="Pamela Alarcón - Contacto Entrenadora Personal"
-              className="rounded-2xl shadow-lg w-full object-cover aspect-[3/4]"
+              className="w-full h-full object-cover rounded-l-2xl"
             />
-            <div className="bg-white/40 backdrop-blur-sm p-6 rounded-2xl border border-primary/5 shadow-sm">
-              <h3 className="font-display font-bold text-lg text-foreground mb-3">¿Qué esperar de la sesión?</h3>
-              <ul className="space-y-3 text-sm text-muted-foreground">
-                <li className="flex gap-3">
-                  <span className="text-primary font-bold">•</span>
-                  <span>30-40 minutos de charla personalizada.</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-primary font-bold">•</span>
-                  <span>Valoración de tus objetivos y etapa actual.</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-primary font-bold">•</span>
-                  <span>Resolución de dudas sobre los programas.</span>
-                </li>
-              </ul>
-            </div>
           </div>
 
+          {/* Right: Calendly - sticky, same height */}
           <div
             ref={calendlyRef}
-            className="w-full rounded-2xl overflow-hidden bg-transparent -mt-6 lg:-mt-8"
-            style={{ minWidth: "320px", height: "1100px" }}
+            className="w-full overflow-hidden bg-transparent sticky top-16 self-start lg:rounded-l-none rounded-2xl lg:rounded-r-2xl"
+            style={{ minWidth: "320px", height: "700px" }}
           >
             <div className="w-full h-full flex items-center justify-center">
               <div className="flex flex-col items-center gap-2 text-muted-foreground">
