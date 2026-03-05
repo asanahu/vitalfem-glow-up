@@ -11,7 +11,7 @@ const features = [
   { icon: Salad, title: "Nutrición personalizada", text: "Dieta personalizada junto a herramientas que te ayudarán a gestionar tu alimentación de forma práctica y sostenible." },
   { icon: MessageCircle, title: "Seguimiento continuo por WhatsApp", text: "Contacto directo para resolver dudas y ajustar el plan cuando sea necesario." },
   { icon: VideoIcon, title: "Videollamadas de control", text: "Revisión de avances, ajustes y planificación de los siguientes pasos." },
-  { icon: Smartphone, title: "App VitalFem", text: "Todos tus entrenamientos, procesos y material exclusivo en un mismo lugar." },
+  { icon: Smartphone, title: "App VitalFem", text: "Todos tus entrenamientos, progreso y material exclusivo en un mismo lugar." },
   { icon: Stethoscope, title: "Red de salud VitalFem", text: "Acceso a valoración online de fisioterapia especializada en suelo pélvico y salud femenina (servicio premium bajo consulta)." },
 ];
 
@@ -40,11 +40,11 @@ const MujerFit = () => (
          <div className="mb-12">
            <h2 className="font-display font-bold text-xl text-foreground mb-3">Lo que te ofrece este programa</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Mujer Fit es un servicio de entrenamiento de fuerza totalmente personalizado, adaptado a tu nivel, disponibilidad y estilo de vida. Ya sea en casa o en el gimnasio, tu planificación se adapta a ti, no tú al plan.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Aquí no hacemos rutinas genéricas. Entrenas con criterio y seguimiento para un objetivo claro: sentirte más fuerte, más ágil y con más energía.
-            </p>
+               Mujer Fit es un servicio integral de entrenamiento de fuerza y nutrición totalmente personalizado, adaptado a tu nivel, disponibilidad y estilo de vida. Ya sea en casa o en el gimnasio, diseñamos tu plan con un objetivo claro: sentirte más fuerte, más ágil y con más energía.
+             </p>
+             <p className="text-muted-foreground leading-relaxed">
+               Aquí no hacemos rutinas genéricas. Entrenas con criterio y seguimiento real, la combinación adecuada para que llegues hasta donde quieras llegar.
+             </p>
          </div>
 
          {/* Features */}
