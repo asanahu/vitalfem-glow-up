@@ -1,4 +1,4 @@
-import { Dumbbell, Baby, Salad, BookOpen, MessageCircle, Video as VideoIcon } from "lucide-react";
+import { Dumbbell, Baby, Heart, Salad, BookOpen, MessageCircle, Video as VideoIcon } from "lucide-react";
 import appPreview from "@/assets/app-preview.png";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -21,7 +21,7 @@ const programs = [
   {
     id: "embarazo-saludable",
     title: "Embarazo Saludable",
-    icon: null,
+    icon: Heart,
     subtitle: "Entrena segura en cada trimestre con un programa adaptado a tus necesidades.",
     summary: "Mantente activa, gestiona posibles molestias y prepara tu cuerpo para el parto y la recuperación posparto.",
   },
@@ -54,19 +54,7 @@ const Programs = () => {
           {programs.map((p) => (
             <div key={p.id} id={p.id} className="bg-card border border-border rounded-2xl p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col">
               <div className="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-                {p.icon ? (
-                  <p.icon className="w-7 h-7 text-primary" />
-                ) : (
-                  <svg className="w-7 h-7 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="3.2" r="2.2" />
-                    <path d="M13.5 5.4c.3.8.4 1.8.2 2.8-.3 1.2-.5 2.2-.3 3.2.3 1.2 1 2.2 1.8 3.2" />
-                    <path d="M10.5 5.4c-.5 1-.8 2.2-.8 3.5 0 1.8.5 3.5 1.2 5" />
-                    <ellipse cx="11.8" cy="12" rx="3.2" ry="4.2" />
-                    <path d="M9.5 14.5c-.2.8-.3 1.5-.2 2.2.1 1 .4 2 .7 3.2l.5 1.6" />
-                    <path d="M14.2 14.5c.2.8.3 1.5.2 2.2-.1 1-.3 2-.5 3.2l-.4 1.6" />
-                    <path d="M14.8 11c.6-.2 1.2-.1 1.5.3" />
-                  </svg>
-                )}
+                <p.icon className="w-7 h-7 text-primary" />
               </div>
               <h3 className="text-xl font-display font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
                 {p.title}
