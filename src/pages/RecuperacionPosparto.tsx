@@ -22,12 +22,12 @@ const RecuperacionPosparto = () => (
     <Navbar />
     <section className="pt-32 pb-20 bg-secondary/30">
       <div className="container mx-auto px-4 max-w-4xl">
-        <p className="text-center text-primary font-display font-semibold text-sm tracking-widest uppercase mb-3">
+        <h2 className="text-center text-primary font-display font-bold text-3xl md:text-4xl tracking-wide uppercase mb-3">
           Recuperación Posparto
-        </p>
-        <h1 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4 text-center">
+        </h2>
+        <p className="text-lg md:text-xl font-display font-semibold text-foreground mb-4 text-center">
           Recupera tu fuerza y bienestar tras el parto.
-        </h1>
+        </p>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
           Porque tú también importas, es momento de cuidarte.
         </p>
