@@ -1,5 +1,5 @@
 import { Dumbbell, Baby, Heart, Salad, BookOpen, MessageCircle, Video as VideoIcon } from "lucide-react";
-import appPreview from "@/assets/app-preview.png";
+import appPreview from "@/assets/app-preview-new.png";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const services = [
@@ -106,7 +106,7 @@ const Programs = () => {
               </div>
 
               <p className="mt-8 text-sm italic text-primary/60 font-medium text-center max-w-[260px]">
-                Tu nutrición y entrenamiento, siempre contigo en la App VitalFem
+                Tu entrenamiento y nutrición, siempre contigo en nuestra App
               </p>
             </div>
           </div>
