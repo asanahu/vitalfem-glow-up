@@ -22,6 +22,9 @@ const MujerFit = () => (
     <Navbar />
     <section className="pt-32 pb-20 bg-secondary/30">
       <div className="container mx-auto px-4 max-w-4xl">
+        <p className="text-center text-primary font-display font-semibold text-sm tracking-widest uppercase mb-3">
+          Mujer Fit
+        </p>
          <h1 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4 text-center">
            Entrena con estructura. Consigue resultados reales.
          </h1>

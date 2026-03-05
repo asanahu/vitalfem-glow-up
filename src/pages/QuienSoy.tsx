@@ -3,6 +3,13 @@ import foto2 from "@/assets/foto-2.JPG";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { Dumbbell, Heart, Baby } from "lucide-react";
+
+const programs = [
+  { id: "mujer-fit", title: "Mujer Fit", icon: Dumbbell, description: "Gana fuerza, mejora tu salud y crea hábitos sostenibles." },
+  { id: "embarazo-saludable", title: "Embarazo Saludable", icon: Heart, description: "Entrena segura en cada trimestre con un programa adaptado." },
+  { id: "recuperacion-posparto", title: "Recuperación Posparto", icon: Baby, description: "Recupera tu fuerza empezando desde la base." },
+];
 
 const QuienSoy = () => {
   return (
@@ -53,6 +60,35 @@ const QuienSoy = () => {
           </div>
         </div>
       </section>
+
+      {/* Programs section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-center text-foreground mb-12">
+            ¿Cómo puedo ayudarte?
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            {programs.map((p) => (
+              <a
+                key={p.id}
+                href={`/${p.id}`}
+                className="bg-card border border-border rounded-2xl p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col items-center text-center"
+              >
+                <div className="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center mb-4">
+                  <p.icon className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="text-xl font-display font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                  {p.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {p.description}
+                </p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <Footer />
       <WhatsAppButton />
     </div>

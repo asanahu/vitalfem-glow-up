@@ -1,18 +1,18 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import { ClipboardList, ShieldCheck, Dumbbell, MessageCircle, Video as VideoIcon, Smartphone } from "lucide-react";
+import { ClipboardList, Salad, MessageCircle, Video as VideoIcon, Smartphone, Stethoscope } from "lucide-react";
 import foto8 from "@/assets/foto-8.JPEG";
 import foto9 from "@/assets/foto-9.png";
 import pospartoNew from "@/assets/posparto-new.jpeg";
 
 const features = [
-  { icon: ClipboardList, title: "Valoración inicial personalizada", text: "Analizamos tu punto de partida tras el embarazo y el parto." },
-  { icon: ShieldCheck, title: "Trabajo específico de abdomen y suelo pélvico", text: "Recuperación funcional antes de introducir cargas más exigentes." },
-  { icon: Dumbbell, title: "Progresión segura hacia entrenamiento de fuerza", text: "Reintroducimos el ejercicio de forma estructurada y adaptada." },
-  { icon: MessageCircle, title: "Seguimiento continuo por WhatsApp", text: "Ajustes y apoyo durante todo el proceso." },
-  { icon: VideoIcon, title: "Videollamadas de control", text: "Revisión de evolución y adaptación del plan." },
-  { icon: Smartphone, title: "App VitalFem", text: "Acceso a tu planificación, vídeos explicativos y seguimiento." },
+  { icon: ClipboardList, title: "Planificación personalizada", text: "Entrenamiento enfocado en la recuperación funcional de abdomen y suelo pélvico para poder introducir cargas con seguridad." },
+  { icon: Salad, title: "Nutrición personalizada", text: "Dieta personalizada y pautas enfocadas en tu recuperación (adaptadas a si estás en periodo de lactancia o no)." },
+  { icon: MessageCircle, title: "Seguimiento continuo por WhatsApp", text: "Contacto directo para resolver dudas y que te sientas acompañada en este camino." },
+  { icon: VideoIcon, title: "Videollamadas de control", text: "Revisión de tu progreso y ajustes de los siguientes pasos." },
+  { icon: Smartphone, title: "App VitalFem", text: "Tus entrenamientos, progresos y contenido exclusivo en un mismo lugar." },
+  { icon: Stethoscope, title: "Red de salud VitalFem", text: "Acceso a valoración online de fisioterapia especializada en salud femenina (servicio premium bajo consulta)." },
 ];
 
 const photos = [foto8, foto9, pospartoNew];
@@ -22,11 +22,14 @@ const RecuperacionPosparto = () => (
     <Navbar />
     <section className="pt-32 pb-20 bg-secondary/30">
       <div className="container mx-auto px-4 max-w-4xl">
+        <p className="text-center text-primary font-display font-semibold text-sm tracking-widest uppercase mb-3">
+          Recuperación Posparto
+        </p>
         <h1 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4 text-center">
-          Recupera tu fuerza desde la base.
+          Recupera tu fuerza y bienestar tras el parto.
         </h1>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          El posparto no es momento de exigirte más, sino de reconstruir con criterio.
+          Porque tú también importas, es momento de cuidarte.
         </p>
 
         <div className="grid grid-cols-3 gap-4 mb-12">
@@ -37,14 +40,8 @@ const RecuperacionPosparto = () => (
 
         <div className="mb-12">
           <h2 className="font-display font-bold text-xl text-foreground mb-3">Lo que te ofrece este programa</h2>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            Recuperación Posparto es un programa diseñado para ayudarte a volver a entrenar de forma progresiva y respetuosa, trabajando la funcionalidad del abdomen y el suelo pélvico antes de dar el siguiente paso.
-          </p>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            Aquí no buscamos "recuperar tu cuerpo de antes", sino ayudarte a sentirte fuerte, estable y segura en esta nueva etapa.
-          </p>
           <p className="text-muted-foreground leading-relaxed">
-            Avanzas a tu ritmo, con acompañamiento y sin presión.
+            Recuperación Posparto es un programa integral de entrenamiento de fuerza y nutrición diseñado para ayudarte a volver a entrenar de forma progresiva y respetuosa. Personalizamos cada etapa de tu recuperación, trabajando la funcionalidad del abdomen y el suelo pélvico, además de recuperar la movilidad y la fuerza necesarias para que afrontes tu día a día con máxima energía.
           </p>
         </div>
 
@@ -69,14 +66,13 @@ const RecuperacionPosparto = () => (
             Este programa es para ti si…
           </p>
           <ul className="space-y-2 text-muted-foreground text-sm leading-relaxed">
-            <li>✔️ Has dado a luz y no sabes cómo volver a entrenar de forma segura.</li>
-            <li>✔️ Sientes debilidad en abdomen o suelo pélvico y quieres trabajarlo bien.</li>
-            <li>✔️ Te preocupa hacerlo demasiado rápido o de forma incorrecta.</li>
-            <li>✔️ Quieres recuperar fuerza y movilidad sin presión ni comparaciones.</li>
-            <li>✔️ Buscas acompañamiento profesional en esta etapa.</li>
+            <li>✔️ Has dado a luz y quieres volver a entrenar de forma segura y sin miedos.</li>
+            <li>✔️ Sientes debilidad en abdomen o suelo pélvico y quieres trabajarlo correctamente.</li>
+            <li>✔️ Quieres recuperar tu fuerza y movilidad de forma progresiva.</li>
+            <li>✔️ Buscas sentirte fuerte por ti y por tu bebé.</li>
           </ul>
           <p className="text-muted-foreground text-sm leading-relaxed mt-4 italic">
-            Si quieres volver a sentirte fuerte, con confianza y segura en tu cuerpo, este es tu siguiente paso.
+            Si quieres volver a entrenar con confianza, estás a solo un paso.
           </p>
         </div>
 

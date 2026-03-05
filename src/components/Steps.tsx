@@ -5,7 +5,7 @@ const steps = [
   {
     number: "01",
     title: "Rellena el formulario",
-    description: "Cuéntame tus objetivos y disponibilidad para conocer tu caso y concretar nuestra videollamada inicial.",
+    description: "Selecciona tu horario para nuestra videollamada y completa el formulario para que conozca tus objetivos.",
     icon: ClipboardList,
   },
   {
@@ -39,7 +39,7 @@ const Steps = () => {
           {steps.map((s, i) => (
             <div key={s.number} className="relative text-center">
               {i < steps.length - 1 && (
-                <div className="hidden md:block absolute top-10 left-[60%] w-[80%] h-0.5 bg-border" />
+                <div className="hidden md:block absolute top-10 left-[calc(50%+40px)] w-[calc(100%-40px)] h-0.5 bg-border" />
               )}
               <div className="w-20 h-20 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4 relative z-10">
                 <span className="text-2xl font-display font-bold text-primary">{s.number}</span>
