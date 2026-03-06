@@ -1,6 +1,6 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
-import { useState, useEffect, useCallback } from "react";
+import { useState } from "react";
 
 const testimonials = [
   {
@@ -50,33 +50,56 @@ const testimonials = [
   },
 ];
 
+const MAX_CHARS = 180;
+
+const TestimonialCard = ({ t }: { t: (typeof testimonials)[0] }) => {
+  const [expanded, setExpanded] = useState(false);
+  const needsTruncate = t.text.length > MAX_CHARS;
+  const displayText = !expanded && needsTruncate ? t.text.slice(0, MAX_CHARS).trimEnd() + "…" : t.text;
+
+  return (
+    <div className="bg-card border border-border rounded-2xl p-8 hover:shadow-lg transition-shadow relative flex flex-col justify-between h-[280px]">
+      <div className="overflow-hidden flex-1">
+        <Quote className="w-8 h-8 text-accent mb-4 shrink-0" />
+        <p className="text-muted-foreground text-sm leading-relaxed italic">
+          "{displayText}"
+          {needsTruncate && !expanded && (
+            <button
+              onClick={() => setExpanded(true)}
+              className="text-primary/70 hover:text-primary ml-1 text-xs font-medium transition-colors"
+            >
+              Leer más
+            </button>
+          )}
+          {needsTruncate && expanded && (
+            <button
+              onClick={() => setExpanded(false)}
+              className="text-primary/70 hover:text-primary ml-1 text-xs font-medium transition-colors"
+            >
+              Leer menos
+            </button>
+          )}
+        </p>
+      </div>
+      <div className="mt-4">
+        <p className="font-bold text-foreground">{t.initials}</p>
+        <p className="text-xs text-primary font-medium">{t.program}</p>
+      </div>
+    </div>
+  );
+};
+
 const Testimonials = () => {
   const ref = useScrollAnimation();
   const [current, setCurrent] = useState(0);
-
-  const visibleCount = typeof window !== "undefined" && window.innerWidth >= 768 ? 3 : 1;
   const total = testimonials.length;
 
-  const next = useCallback(() => {
-    setCurrent((prev) => (prev + 1) % total);
-  }, [total]);
+  const next = () => setCurrent((prev) => (prev + 1) % total);
+  const prev = () => setCurrent((prev) => (prev - 1 + total) % total);
 
-  const prev = useCallback(() => {
-    setCurrent((prev) => (prev - 1 + total) % total);
-  }, [total]);
-
-  // Auto-advance every 5 seconds
-  useEffect(() => {
-    const interval = setInterval(next, 5000);
-    return () => clearInterval(interval);
-  }, [next]);
-
-  const getVisibleTestimonials = () => {
-    const items = [];
-    for (let i = 0; i < visibleCount; i++) {
-      items.push(testimonials[(current + i) % total]);
-    }
-    return items;
+  const getVisible = () => {
+    const count = typeof window !== "undefined" && window.innerWidth >= 768 ? 3 : 1;
+    return Array.from({ length: count }, (_, i) => testimonials[(current + i) % total]);
   };
 
   return (
@@ -90,7 +113,6 @@ const Testimonials = () => {
         </p>
 
         <div className="relative">
-          {/* Left arrow */}
           <button
             onClick={prev}
             aria-label="Anterior"
@@ -99,28 +121,12 @@ const Testimonials = () => {
             <ChevronLeft className="w-5 h-5 text-foreground/60" />
           </button>
 
-          {/* Cards */}
           <div className="grid md:grid-cols-3 gap-8 px-8 md:px-12">
-            {getVisibleTestimonials().map((t, idx) => (
-              <div
-                key={`${t.initials}-${idx}-${current}`}
-                className="bg-card border border-border rounded-2xl p-8 hover:shadow-lg transition-shadow relative flex flex-col justify-between min-h-[280px]"
-              >
-                <div>
-                  <Quote className="w-8 h-8 text-accent mb-4" />
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-6 italic">
-                    "{t.text}"
-                  </p>
-                </div>
-                <div>
-                  <p className="font-bold text-foreground">{t.initials}</p>
-                  <p className="text-xs text-primary font-medium">{t.program}</p>
-                </div>
-              </div>
+            {getVisible().map((t, idx) => (
+              <TestimonialCard key={`${t.initials}-${idx}-${current}`} t={t} />
             ))}
           </div>
 
-          {/* Right arrow */}
           <button
             onClick={next}
             aria-label="Siguiente"
@@ -130,15 +136,12 @@ const Testimonials = () => {
           </button>
         </div>
 
-        {/* Dots indicator */}
         <div className="flex justify-center gap-2 mt-8">
           {Array.from({ length: total }).map((_, i) => (
             <button
               key={i}
               onClick={() => setCurrent(i)}
-              className={`w-2 h-2 rounded-full transition-colors ${
-                i === current ? "bg-primary" : "bg-foreground/20"
-              }`}
+              className={`w-2 h-2 rounded-full transition-colors ${i === current ? "bg-primary" : "bg-foreground/20"}`}
               aria-label={`Ir al testimonio ${i + 1}`}
             />
           ))}
