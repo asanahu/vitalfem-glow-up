@@ -60,8 +60,8 @@ const TestimonialCard = ({
   onReadMore: () => void;
 }) => {
   const needsTruncate = t.text.length > MAX_CHARS;
-  const displayText = needsTruncate
-    ? t.text.slice(0, MAX_CHARS).trimEnd() + "… "
+  const truncated = needsTruncate
+    ? t.text.slice(0, MAX_CHARS).trimEnd() + "…"
     : t.text;
 
   return (
