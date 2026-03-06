@@ -60,27 +60,27 @@ const TestimonialCard = ({
   onReadMore: () => void;
 }) => {
   const needsTruncate = t.text.length > MAX_CHARS;
-  const displayText = needsTruncate
-    ? t.text.slice(0, MAX_CHARS).trimEnd() + "… "
+  const truncated = needsTruncate
+    ? t.text.slice(0, MAX_CHARS).trimEnd() + "…"
     : t.text;
 
   return (
     <div className="bg-card border border-border rounded-2xl p-8 hover:shadow-lg transition-shadow relative flex flex-col justify-between h-[280px]">
-      <div className="overflow-hidden flex-1">
+      <div className="flex-1 min-h-0">
         <Quote className="w-8 h-8 text-accent mb-4 shrink-0" />
         <p className="text-muted-foreground text-sm leading-relaxed italic">
-          "{displayText}"
+          "{truncated}"
           {needsTruncate && (
             <button
               onClick={onReadMore}
-              className="text-primary font-semibold hover:underline text-sm not-italic ml-0.5"
+              className="text-primary font-bold hover:underline text-sm not-italic inline ml-1"
             >
-              Leer más
+              leer más
             </button>
           )}
         </p>
       </div>
-      <div className="mt-4">
+      <div className="mt-4 shrink-0">
         <p className="font-bold text-foreground">{t.initials}</p>
         <p className="text-xs text-primary font-medium">{t.program}</p>
       </div>
