@@ -6,7 +6,7 @@ const Footer = () => (
     <div className="container mx-auto px-4 flex flex-col items-center text-center">
       {/* Logo */}
       <img src={logo} alt="Logo VitalFem - Entrenamiento de fuerza para mujeres" className="h-20 md:h-24 object-contain mb-4" />
-      
+
       {/* Tagline */}
       <p className="text-sm text-muted-foreground mb-6">
         Entrenamiento de fuerza para mujeres, adaptado a cada etapa de tu vida.
@@ -14,7 +14,7 @@ const Footer = () => (
 
       {/* Social icons */}
       <div className="flex items-center gap-6 mb-8">
-        <a href="https://www.instagram.com/vitalfem.es/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+        <a href="https://www.instagram.com/vitalfem_bypam/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
           <Instagram className="w-6 h-6" />
         </a>
         <a href="mailto:info@vitalfem.es" className="text-muted-foreground hover:text-primary transition-colors">

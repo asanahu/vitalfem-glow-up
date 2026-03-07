@@ -8,7 +8,7 @@ const AboutMe = () => {
   const ref = useScrollAnimation();
 
   return (
-    <section id="quien-soy" className="py-20 bg-secondary/30">
+    <section id="quien-soy" className="py-20 bg-secondary/30 scroll-mt-20">
       <div ref={ref} className="container mx-auto px-4 opacity-0">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative">

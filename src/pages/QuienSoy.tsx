@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Dumbbell, Heart, Baby } from "lucide-react";
+import { useEffect } from "react";
 
 const programs = [
   { id: "mujer-fit", title: "Mujer Fit", icon: Dumbbell, description: "Gana fuerza, mejora tu salud y crea hábitos sostenibles." },
@@ -12,6 +13,10 @@ const programs = [
 ];
 
 const QuienSoy = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background font-body">
       <Navbar />
@@ -23,12 +28,14 @@ const QuienSoy = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start text-muted-foreground leading-relaxed">
             {/* Row 1: image + text */}
-            <img
-              src={foto1}
-              alt="Pamela Alarcón - Entrenadora Personal para Mujeres"
-              className="rounded-2xl shadow-lg w-full object-cover aspect-[3/4]"
-            />
-            <div className="space-y-4 flex flex-col justify-center h-full">
+            <div className="order-1 md:order-1">
+              <img
+                src={foto1}
+                alt="Pamela Alarcón - Entrenadora Personal para Mujeres"
+                className="rounded-2xl shadow-lg w-full object-cover aspect-[3/4]"
+              />
+            </div>
+            <div className="order-2 md:order-2 space-y-4 flex flex-col justify-center h-full">
               <p>
                 ¡Hola! Soy <strong className="text-foreground">Pamela Alarcón</strong>, entrenadora personal especializada en <strong className="text-foreground">embarazo y posparto</strong>.
               </p>
@@ -41,7 +48,7 @@ const QuienSoy = () => {
             </div>
 
             {/* Row 2: text + image */}
-            <div className="space-y-4 flex flex-col justify-center h-full">
+            <div className="order-4 md:order-3 space-y-4 flex flex-col justify-center h-full">
               <p>
                 Con el tiempo cambié el escenario por las mancuernas y descubrí que mi vocación era ayudar a otras personas a superarse a través del entrenamiento. Me titulé en <strong className="text-foreground">TSEAS</strong> y continué mi formación en <strong className="text-foreground">Ciencias de la Actividad Física y del Deporte (CAFYD)</strong>, especializándome en <strong className="text-foreground">entrenamiento femenino</strong>, <strong className="text-foreground">embarazo</strong> y <strong className="text-foreground">posparto</strong>.
               </p>
@@ -52,11 +59,13 @@ const QuienSoy = () => {
                 Así nació <strong className="text-foreground">VitalFem</strong>, una plataforma de entrenamiento y nutrición online personalizada. Aquí te ayudo a construir un estilo de vida activo, fuerte y sostenible, respetando cada etapa de tu proceso.
               </p>
             </div>
-            <img
-              src={foto2}
-              alt="Pamela Alarcón ejercicio con pelota"
-              className="rounded-2xl shadow-lg w-full object-cover aspect-[3/4]"
-            />
+            <div className="order-3 md:order-4">
+              <img
+                src={foto2}
+                alt="Pamela Alarcón ejercicio con pelota"
+                className="rounded-2xl shadow-lg w-full object-cover aspect-[3/4]"
+              />
+            </div>
           </div>
         </div>
       </section>
