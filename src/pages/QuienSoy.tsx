@@ -3,6 +3,7 @@ import foto2 from "@/assets/foto-2.JPG";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import SEO from "@/components/SEO";
 import { Dumbbell, Heart, Baby } from "lucide-react";
 import { useEffect } from "react";
 
@@ -19,6 +20,11 @@ const QuienSoy = () => {
 
   return (
     <div className="min-h-screen bg-background font-body">
+      <SEO
+        title="Sobre Mí - Mi Historia"
+        description="Conoce la historia de Pamela Alarcón y cómo a través de VitalFem te ayudo a conseguir un estilo de vida activo y saludable mediante el entrenamiento."
+        url="https://www.vitalfem.es/quien-soy"
+      />
       <Navbar />
       <section className="pt-32 pb-20 bg-secondary/30">
         <div className="container mx-auto px-4">

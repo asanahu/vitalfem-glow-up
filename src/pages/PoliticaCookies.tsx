@@ -1,11 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const PoliticaCookies = () => (
   <>
+    <SEO title="Política de Cookies" description="Política de Cookies de VitalFem." />
     <Navbar />
     <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4 max-w-3xl text-foreground [&_h2]:text-xl [&_h2]:font-display [&_h2]:font-bold [&_h2]:text-foreground [&_h2]:mt-10 [&_h2]:mb-4 [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_p]:mb-4 [&_li]:text-muted-foreground [&_a]:text-primary [&_ul]:mb-4 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-1 [&_th]:text-foreground [&_th]:font-bold [&_th]:p-3 [&_th]:text-left [&_td]:text-muted-foreground [&_td]:p-3 [&_table]:w-full [&_table]:border-collapse [&_tr]:border-b [&_tr]:border-border">
+      <div className="container mx-auto px-4 max-w-3xl text-foreground [&_h2]:text-xl [&_h2]:font-display [&_h2]:font-bold [&_h2]:text-foreground [&_h2]:mt-10 [&_h2]:mb-4 [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_p]:mb-4 [&_li]:text-muted-foreground [&_a]:text-primary [&_ul]:mb-4 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-1 [&_th]:text-foreground [&_th]:font-bold [&_th]:p-3 [&_th]:text-left [&_td]:text-muted-foreground [&_td]:p-3 [&_table]:w-full [&_table]:border-collapse [&_tr]:border-b [&_tr]:border-border">
         <h1 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-2">Política de Cookies</h1>
         <p className="text-sm text-muted-foreground mb-8">Última actualización: enero de 2026</p>
 

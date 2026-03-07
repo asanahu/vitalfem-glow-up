@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import SEO from "@/components/SEO";
 import { ClipboardList, Salad, MessageCircle, Video as VideoIcon, Smartphone, Stethoscope } from "lucide-react";
 import embarazo1 from "@/assets/embarazo-1.png";
 import embarazo2 from "@/assets/embarazo-2.png";
@@ -19,6 +20,11 @@ const photos = [embarazo1, embarazo2, embarazo3];
 
 const EmbarazoSaludable = () => (
   <div className="min-h-screen bg-background font-body">
+    <SEO
+      title="Entrenamiento en el Embarazo"
+      description="Entrena con seguridad en cada trimestre de tu embarazo con nuestro programa especializado en fuerza, movilidad y nutrición online."
+      url="https://www.vitalfem.es/embarazo-saludable"
+    />
     <Navbar />
     <section className="pt-32 pb-20 bg-secondary/30">
       <div className="container mx-auto px-4 max-w-4xl">

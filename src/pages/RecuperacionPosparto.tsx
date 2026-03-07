@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import SEO from "@/components/SEO";
 import { ClipboardList, Salad, MessageCircle, Video as VideoIcon, Smartphone, Stethoscope } from "lucide-react";
 import foto8 from "@/assets/foto-8.JPEG";
 import foto9 from "@/assets/foto-9.png";
@@ -19,6 +20,11 @@ const photos = [foto8, foto9, pospartoNew];
 
 const RecuperacionPosparto = () => (
   <div className="min-h-screen bg-background font-body">
+    <SEO
+      title="Recuperación Posparto | Suelo Pélvico"
+      description="Recupera tu fuerza y funcionalidad tras el parto. Entrenamiento seguro enfocado en abdomen y suelo pélvico para volver a entrenar con confianza."
+      url="https://www.vitalfem.es/recuperacion-posparto"
+    />
     <Navbar />
     <section className="pt-32 pb-20 bg-secondary/30">
       <div className="container mx-auto px-4 max-w-4xl">

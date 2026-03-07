@@ -1,8 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const PoliticaPrivacidad = () => (
   <>
+    <SEO title="Política de Privacidad" description="Política de Privacidad y gestión de datos en VitalFem." />
     <Navbar />
     <main className="pt-24 pb-16">
       <div className="container mx-auto px-4 max-w-3xl text-foreground [&_h2]:text-xl [&_h2]:font-display [&_h2]:font-bold [&_h2]:text-foreground [&_h2]:mt-10 [&_h2]:mb-4 [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_p]:mb-4 [&_li]:text-muted-foreground [&_a]:text-primary [&_ul]:mb-4 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-1">
