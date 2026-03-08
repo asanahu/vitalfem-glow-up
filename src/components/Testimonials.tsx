@@ -73,7 +73,7 @@ const TestimonialCard = ({
           {needsTruncate && (
             <button
               onClick={onReadMore}
-              className="text-primary font-bold hover:underline text-sm not-italic inline ml-1"
+              className="text-muted-foreground font-bold hover:underline text-sm not-italic inline ml-1"
             >
               leer más
             </button>
