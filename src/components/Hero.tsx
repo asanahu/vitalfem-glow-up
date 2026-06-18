@@ -15,18 +15,13 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-2xl">
-          <div className="inline-flex items-center gap-2 bg-[#B85A7A] text-white font-semibold text-sm px-4 py-2 rounded-full mb-6 animate-fade-in-up relative">
+          <div className="inline-flex items-center gap-2 bg-[#B85A7A] text-white font-semibold text-sm px-4 py-2 rounded-full mb-6 animate-fade-in-up">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
               <rect x="2" y="3" width="20" height="14" rx="2" />
               <line x1="8" y1="21" x2="16" y2="21" />
               <line x1="12" y1="17" x2="12" y2="21" />
             </svg>
             <span>100% ONLINE</span>
-            <span className="absolute -left-5 top-1/2 -translate-y-1/2 flex gap-0.5">
-              <span className="block w-1.5 h-0.5 bg-[#B85A7A] rounded-full" />
-              <span className="block w-2.5 h-0.5 bg-[#B85A7A] rounded-full" />
-              <span className="block w-1.5 h-0.5 bg-[#B85A7A] rounded-full" />
-            </span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-tight mb-6 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             Entrenamiento<br />seguro y progresivo<br />en el embarazo y<br />posparto
