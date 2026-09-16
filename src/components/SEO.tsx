@@ -15,7 +15,10 @@ const SEO = ({
     image = "/og-image.png"
 }: SEOProps) => {
     const location = useLocation();
-    const canonicalUrl = url ?? `https://www.vitalfem.es${location.pathname === "/" ? "" : location.pathname}`;
+    const path = location.pathname === "/" ? "/" : `${location.pathname.replace(/\/+$/, "")}/`;
+    const canonicalUrl = url
+        ? `${url.replace(/\/+$/, "")}/`
+        : `https://www.vitalfem.es${path}`;
     const fullTitle = `${title} | VitalFem`;
 
     return (
